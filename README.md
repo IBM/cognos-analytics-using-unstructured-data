@@ -186,8 +186,76 @@ Outside of the scripts used to build the product and data listed above, there ar
 
 ## 6. Run Cognos Analytics to visualize data
 
-TO BE ADDED
- 
+### 1. Upload files into Cognos Analytics
+
+From the main dashboard, select the `+` icon in the lower left corner. Select `Upload files`.
+
+From the file selection dialog, select the `csv` files created by the scripts:
+
+* `data/out-products.csv`
+* `data/out-reviews.csv`
+* `data/out-keywords.csv`
+
+### 2. Create a new Data Module
+
+From the main dashboard, select the `+` icon in the lower left corner. Select `Data module`.
+
+From the source selection panel, select all 3 files and click `OK`.
+
+  ![dm-source-selection](doc/source/images/dm-source-selection.png)
+
+The `Data module`panel will be displayed, with the 3 files listed in the left-hand list of source files.
+
+Select the `Relationships` tab from the content panel to view the files in the graphic editor. At this point, no relationships will exist.
+
+  ![dm-relationships-before](doc/source/images/dm-relationships-before.png)
+
+To create a relationship, right click on the `out-products.csv` file to bring up the context menu. Select `Relationship...`.
+
+  ![dm-add-relationship](doc/source/images/dm-add-relationship.png)
+
+From the `Relationship` panel, select `out-reviews.csv` in the `Table 2` drop-down list. Then select `ProductId` for both tables to connect them. Then select the `Match selected columns` button to view the relationship. Click `OK` to save.
+
+  ![dm-assign-relationship](doc/source/images/dm-assign-relationship.png)
+
+Repeat the process linking the `out-products.csv` file with `out-keywords.csv`. The end result should result in the following:
+
+  ![dm-relationships-after](doc/source/images/dm-relationships-after.png)
+
+Click the `Save` icon in the top menu to save off the `Data module`.
+
+### 3. Create a Dashboard
+
+From the main dashboard, select the `+` icon in the lower left corner. Select `Dashboard`. Accept the default template and click `OK`.
+
+Click `Select a source` to bring up the selction dialog. Select the `Data module` you just created, and click `OK`.
+
+  ![db-select-source](doc/source/images/db-select-source.png)
+
+Now you should see a blank canvas to create your dashboard. The data files and field names will be displayed in the left-side menu.
+
+  ![db-blank](doc/source/images/db-blank.png)
+
+To create your dashboard, you will need to become knowledgeable with the numerous tools available from icons and pop-up menus.
+
+  ![db-tools](doc/source/images/db-tools.png)
+
+From the image above:
+
+* 1 - toggles you between edit and preview mode.
+* 2 - an example of one of many drop-down menus associated with data objects.
+* 3 - displays the relationship between all of the visual objects on your dashboard. Objects with the same number are related.
+* 4 - toggles full-screen mode on and off.
+* 5 - displays the fields associated with the selected visual object.
+* 6 - properties associated with the selected visual object.
+
+The types of visualiztions available include the following:
+
+  ![db-widget-set](doc/source/images/db-widget-set.png)
+
+### 4. Add Visualizations to the Dashboard
+
+
 # License
 
 This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
