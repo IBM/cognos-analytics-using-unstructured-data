@@ -10,13 +10,27 @@ The theme of this code pattern is built around data for a small coffee manufactu
 
 This code pattern is divided into the following sections:
 
-## Integrate Watson Discovery data into Cognos Analytics
+## Visualize unstructured data from Watson Discovery in the Cognos Analytics Dashboard
 
-To understand how to incorporate unstructured data from Watson Discovery into Cognos Analytics, click [here](doc/source/disco.md).
+In this section, we walk through the steps to:
 
-## Integrate Db2 Warehouse data into Cognos Analytics
+* Build product review data
+* Upload the data into Watson Discovery for enrichment and analysis
+* Query the Watson Discovery results to capture keywords and enrichments
+* Upload the data into Cognos Analytics to create data modules and dashboard visualizations
 
-To understand how to store data in Db2 Warehouse and how to build additional visualizations in Cognos Analytics, click [here](doc/source/db2.md).
+Click [here](doc/source/discovery-data.md) to begin.
+
+## Visualize customer insights with business data for product performance analysis
+
+In this section, we build on the first section by adding:
+
+* Create sales, store and inventory data to support our coffee company product data
+* Upload all product and business data into Db2 Warehouse tables
+* Connect the Db2 Warehouse to Cognos Analytics
+* Create additional Cognos Analytics dashboards to visualize business data
+
+Click [here](doc/source/business-data.md) to begin.
 
 # License
 
