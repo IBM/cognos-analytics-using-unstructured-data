@@ -1,6 +1,6 @@
 # Visualize unstructured data from Watson Discovery in the Cognos Analytics Dashboard
 
-In this section, we walk you through the process of loading unstructured data from Watson Discovery into Cognos Analytics, where data can be prepared and visualized using data modeling and dashboards.
+In this section, we will walk you through the process of loading unstructured data from Watson Discovery into Cognos Analytics, where data can be prepared and visualized using data modeling and dashboards.
 
 ## Flow
 
