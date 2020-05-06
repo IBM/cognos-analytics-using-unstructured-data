@@ -1,5 +1,7 @@
 !!!! WORK IN PROGRESS !!!
 
+# Leverage the voice of the customer using Watson Discovery to show business results in Cognos Analytics
+
 To leverage the voice of the customer to drive business results, companies need to leverage AI to gain actionable insights from sentiment, emotion, concepts and key words mentioned in customer feedback. Much of the important data a customer wants to share can already be found. It exists in public forums, blogs, social media posts, chat logs with customer representatives. The challenges to leveraging this information has historically been the unstructured nature of it. Today though, we have AI and services like Watson Discovery that can be trained to aggregate, enrich and help surface key customer insights. This code pattern shows how you can visualize unstructured data from Watson Discovery and business data in Cognos Analytics for product performance analysis.
 
 In this code pattern, unstructured data consisting of product reviews and customer surveys is imported into Cognos Analytics from Watson Discovery. The customer data also indicates the sentiment toward the products surveyed. This data can then be displayed on the Cognos Analytics dashboard. Sales revenue and product inventory data is also visually shown. Combining Cognos Analytics with Discovery, clients will:

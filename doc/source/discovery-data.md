@@ -412,10 +412,12 @@ Now repeat the steps above to create "Negative Reviews". The only change should 
 
 #### Complete and save
 
-Congratulations! You have completed your first Cognos Analytics dashboard. The layout and values should look like this:
+Congratulations! You have completed your first Cognos Analytics dashboard. The layout and values should look similar to this:
 
   ![db-1-final-layout](images/db-1-final-layout.png)
 
 Click the `Save` icon in the top menu to save your dashboard.
 
 In the next section of this code pattern, we will add more data (stored in Db2 Warehouse tables), and create more complex dashboard visualizations.
+
+[![return](https://raw.githubusercontent.com/IBM/pattern-utils/master/deploy-buttons/return.png)](../../README.md#visualize-unstructured-data-from-watson-discovery-in-the-cognos-analytics-dashboard)
