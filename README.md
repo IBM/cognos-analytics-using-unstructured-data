@@ -4,6 +4,8 @@
 
 Cognos Analytics is a tool that includes data modeling and dashboards that provide users the ability to prepare, visualize, and analyze their data. Data can come from both structured and unstructured sources, and in multiple formats.
 
+To sign-up for a free trial version of IBM Cognos Analytics, click [here](https://www.ibm.com/account/reg/ca-en/signup?formid=urx-34710).
+
 In this code pattern, we will provide examples of how to incorporate data from multiple sources, as well as how to create the visualizations to best represent the data.
 
 The theme of this code pattern is built around data for a small coffee manufacturing company, which produces several types of coffee that they sell in local markets. The data will consist of reviews and ratings for their different coffee flavors, as well as associated sales and inventory data.
