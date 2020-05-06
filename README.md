@@ -42,7 +42,7 @@ We will cover how to incorporate data from multiple sources, as well as how to c
 
 To better organize the content, this code pattern is divided into the following sections:
 
-### Visualize unstructured data from Watson Discovery in the Cognos Analytics Dashboard
+### 1. Visualize unstructured data from Watson Discovery in the Cognos Analytics Dashboard
 
 In this section, we walk through the steps to:
 
@@ -53,7 +53,7 @@ In this section, we walk through the steps to:
 
 Click [here](doc/source/discovery-data.md) to begin.
 
-### Visualize customer insights with business data for product performance analysis
+### 2. Visualize customer insights with business data for product performance analysis
 
 In this section, we build on the first section by adding:
 

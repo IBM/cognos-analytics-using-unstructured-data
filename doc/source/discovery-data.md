@@ -419,5 +419,3 @@ Congratulations! You have completed your first Cognos Analytics dashboard. The l
 Click the `Save` icon in the top menu to save your dashboard.
 
 In the next section of this code pattern, we will add more data (stored in Db2 Warehouse tables), and create more complex dashboard visualizations.
-
-[![return](https://raw.githubusercontent.com/IBM/pattern-utils/master/deploy-buttons/return.png)](../../README.md#visualize-unstructured-data-from-watson-discovery-in-the-cognos-analytics-dashboard)
