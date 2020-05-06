@@ -412,7 +412,7 @@ Now repeat the steps above to create "Negative Reviews". The only change should 
 
 #### Complete and save
 
-Congratulations! You have completed your first Cognos Analytics dashboard. The layout and values should look like this:
+Congratulations! You have completed your first Cognos Analytics dashboard. The layout and values should look similar to this:
 
   ![db-1-final-layout](images/db-1-final-layout.png)
 
