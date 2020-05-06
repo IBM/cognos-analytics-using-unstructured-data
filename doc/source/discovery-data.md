@@ -2,17 +2,13 @@
 
 In this section, we will walk you through the process of loading unstructured data from Watson Discovery into Cognos Analytics, where data can be prepared and visualized using data modeling and dashboards.
 
+![architecture](images/architecture-disco.png)
+
 ## Flow
 
-
-## Included components
-
-* [Cognos Analytics](https://www.ibm.com/products/cognos-analytics): A business intelligence solution that empowers users with AI-infused self-service capabilities that accelerate data preparation, analysis, and repot creation.
-* [Watson Discovery](https://www.ibm.com/watson/services/discovery/): A cognitive search and content analytics engine for applications to identify patterns, trends, and actionable insights.
-
-## Featured technologies
-
-* [Node.js](https://nodejs.org/): An open-source JavaScript run-time environment for executing server-side JavaScript code.
+1. Product Review data is loaded into Watson Discovery for enrichment. Results include sentiment analysis and keyword discovery.
+2. User runs Cognos Analytics.
+3. Data files are loaded directly into Cognos Analytics.
 
 ## Steps
 
@@ -34,6 +30,7 @@ git clone https://github.com/IBM/cognos-analytics-using-unstructured-data
 Create the following services:
 
 * **Watson Discovery**
+* **Cognos Analytics** - click [here](https://www.ibm.com/account/reg/ca-en/signup?formid=urx-34710) to register for a free trial version
 
 Use the following instructions for each of the services.
 
