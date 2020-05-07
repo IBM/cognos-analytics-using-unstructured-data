@@ -18,7 +18,7 @@ In this section, we will walk you through the process of loading unstructured da
 1. [Add service credentials to environment file](#4-add-service-credentials-to-environment-file)
 1. [Run scripts to generate data](#5-run-scripts-to-generate-data)
 1. [Build a Data Module in Cognos Analytics](#6-build-a-data-module-in-cognos-analytics)
-1. [Create a Cognos Analytics dashboard](#7=create-a-cognos-analytics-dashboard)
+1. [Create a Cognos Analytics dashboard](#7-create-a-cognos-analytics-dashboard)
 1. [Add visualizations to the Dashboard](#8-add-visualizations-to-the-dashboard)
 1. [Update Data Module](#9-update-data-module)
 
