@@ -17,7 +17,10 @@ In this section, we will walk you through the process of loading unstructured da
 1. [Configure Watson Discovery](#3-configure-watson-discovery)
 1. [Add service credentials to environment file](#4-add-service-credentials-to-environment-file)
 1. [Run scripts to generate data](#5-run-scripts-to-generate-data)
-1. [Run Cognos Analytics to visualize data](#6-run-cognos-analytics-to-visualize-data)
+1. [Build a Data Module in Cognos Analytics](#6-build-a-data-module-in-cognos-analytics)
+1. [Create a Cognos Analytics dashboard](#7=create-a-cognos-analytics-dashboard)
+1. [Add visualizations to the Dashboard](#8-add-visualizations-to-the-dashboard)
+1. [Update Data Module](#9-update-data-module)
 
 ## 1. Clone the repo
 
@@ -178,11 +181,13 @@ Outside of the scripts used to build the product and data listed above, there ar
 
 > **Note**: The actual review dates were spread out from 2008-20017. In order to make the data more relevant to our needs, we modified all dates to be in 2019.
 
-## 6. Run Cognos Analytics to visualize data
+## 6. Build a Data Module in Cognos Analytics
 
-### 1. Upload files into Cognos Analytics
+In Cognos Analytics, a `Data Module` serves as a data repository. It can be used to import external data from files on premise, data sources and cloud data sources. Multiple data sources can be shaped, blended, cleansed and joined  together to create a custom, resusable and sharable data module for use in dashboards and reports.
 
-From the main dashboard, select the `+` icon in the lower left corner. Select `Upload files`.
+### Upload files into Cognos Analytics
+
+From the Cognos Analytics main dashboard, select the `+` icon in the lower left corner. Select `Upload files`.
 
 From the file selection dialog, select the `csv` files created in the previous script:
 
@@ -190,7 +195,7 @@ From the file selection dialog, select the `csv` files created in the previous s
 * `data/out-reviews.csv`
 * `data/out-keywords.csv`
 
-### 2. Create a new Data Module
+### Create a new Data Module
 
 From the main dashboard, select the `+` icon in the lower left corner. Select `Data module`.
 
@@ -218,11 +223,15 @@ Repeat the process linking the `out-products.csv` file with `out-keywords.csv`. 
 
 Click the `Save` icon in the top menu to save off the `Data module`.
 
-### 3. Create a Dashboard
+## 7. Create a Cognos Analytics dashboard
 
-From the main dashboard, select the `+` icon in the lower left corner. Select `Dashboard`. Accept the default template and click `OK`.
+In Cognos Analytics, a `Dashboard` provides users a way to communicate insights and analysis of their data. A dashboard view contains visualizations such as graphs, charts, plots, table, maps, or any other visual representation of data.
 
-Click `Select a source` to bring up the selction dialog. Select the `Data module` you just created, and click `OK`.
+### Create a Dashboard
+
+From the Cognos Analytics main dashboard, select the `+` icon in the lower left corner. Select `Dashboard`. Accept the default template and click `OK`.
+
+Click `Select a source` to bring up the selction dialog. Select the `Data module` you just created in the previous step, and click `OK`.
 
   ![db-1-select-source](images/db-1-select-source.png)
 
@@ -247,9 +256,9 @@ The types of visualizations available include the following:
 
   ![db-1-widget-set](images/db-1-widget-set.png)
 
-### 4. Add visualizations to the Dashboard
+## 8. Add visualizations to the Dashboard
 
-#### Product list box
+### Product list box
 
 Our first visualization will be a list box containing all of our products. It will also serve as a filter - if a product is selected, all of the other visualizations on the dashboard will change its focus to that product.
 
@@ -277,7 +286,11 @@ From the visualization toolbar, click on the `Edit the title` icon, and set the 
 
 Use the box sizing tools to position the box in the upper left-hand corner of the dashboard.
 
-#### Current product ratings
+Use the `Expand/Collapse` button in the upper right-hand corner of your visualization to view in expanded or collapse the view in your dashboard canvas.
+
+  ![db-1-expand-button](images/db-1-expand-button.png)
+
+### Current product ratings
 
 Next we want to show the current ratings for each of our products.
 
@@ -297,7 +310,7 @@ You can change the colors used for the bars by selecting `Properties`, `Color` a
 
   ![db-1-change-element-color](images/db-1-change-element-color.png)
 
-#### Current product sentiment
+### Current product sentiment
 
 Similar to the `Product Ratings` chart, we want to also show product sentiment. The sentiment score is calculated by Watson Discovery based on the text in the product review.
 
@@ -311,7 +324,7 @@ Using the same methods described for `Product Ratings`, change the title, axis l
 >
 > When toggling back to `Edit` mode, you may have to click the `Data` icon (`0111`) to display the resource list. 
 
-#### Keyword Word Cloud
+### Keyword Word Cloud
 
 For our next visualization, we want to show a `word cloud` of all the keywords detected in the product reviews by Watson Discovery. The keywords listed in the word cloud should be size appropriately to the number of times they are mentioned.
 
@@ -337,7 +350,7 @@ With the `Word cloud` visualization object selected, click `Properties` from the
 
   ![db-1-wc-horizontal](images/db-1-wc-horizontal.png)
 
-#### Product ratings over time
+### Product ratings over time
 
 Next we will create a line graph that shows how the product ratings have changed over time.
 
@@ -367,7 +380,7 @@ Use the box sizing tools to position the box in the upper right-hand corner of t
 
   ![db-1-top-row](images/db-1-top-row.png)
 
-#### Product reviews (positive and negative)
+### Product reviews (positive and negative)
 
 Out final visualizations will be to display actual reviews of the products. We will show both the best and the worst reviews for each product.
 
@@ -410,7 +423,7 @@ Now repeat the steps above to create "Negative Reviews". The only change should 
 * `Columns` optioon should be set to `Bottom count`
 * Set title to `Negative Reviews`
 
-#### Complete and save
+### Complete and save
 
 Congratulations! You have completed your first Cognos Analytics dashboard. The layout and values should look similar to this:
 
@@ -418,4 +431,38 @@ Congratulations! You have completed your first Cognos Analytics dashboard. The l
 
 Click the `Save` icon in the top menu to save your dashboard.
 
-In the next section of this code pattern, we will add more data (stored in Db2 Warehouse tables), and create more complex dashboard visualizations.
+## 9. Update Data Module
+
+What do you do if you want to change the underlying data that you used in your dashboard?
+
+The good news is that if you do modify the underlying data, your dashboard will automatically update and reflect the changes.
+
+### Upload new data files
+
+In our example, we are using multiple `csv` files. If any of them have changed, you need to upload the file again.
+
+From the Cognos Analytics main dashboard, select the `+` icon in the lower left corner. Select `Data module`.
+
+From the source selection panel, select the file(s) you want to update and click `OK`.
+
+A confirmation dialog will be displayed asking if you want to `Replace` or `Append` the data. Pick the option most appropriate to handle your changes to the data file.
+
+The next step is to refresh your data module with the new verson of the file(s).
+
+If you currently in the dashboard view, select your data module in the resource list and click the back arrow button.
+
+  ![dm-1-select-dm](images/dm-1-select-dm.png)
+
+Then right-click on your data module listed in the resource list, and select the option `Relink`.
+
+  ![dm-1-relink](images/dm-1-relink.png)
+
+You will then need to confirm which data module you want to replace. Select the data module you have been using with the current dashboard.
+
+  ![dm-1-replace-dm](images/dm-1-replace-dm.png)
+
+This action will cause your dashboard to be refreshed with the new version of the data.
+
+## Next steps
+
+In the next section of this code pattern, we will add more business-related data for our coffee products, store the data in Db2 Warehouse tables, and create more complex dashboard visualizations.

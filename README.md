@@ -14,6 +14,12 @@ In this code pattern, unstructured data consisting of product reviews and custom
 * Get to the root cause of churning customers.
 * Identify actions to increase your NPS or other customer satisfaction metric.
 
+Here is an example of the types of visualzations we will be creating in this code pattern:
+
+  ![db-1-final-layout](doc/source/images/coffee-db.png)
+
+## Architecture
+
 ![architecture](doc/source/images/architecture.png)
 
 ## Flow
