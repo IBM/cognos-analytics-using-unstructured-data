@@ -1,6 +1,6 @@
 ProductId,Product Name,Price,Restock Amount,Restock Interval
-P1000-01,Fog Chaser,3.99,56,monthly
-P1000-02,Cappuccino,3.99,96,monthly
-P1000-03,Dark Roast,3.99,84,monthly
-P1000-04,Columbian,3.99,65,monthly
-P1000-05,Black Tea,3.99,82,monthly
+P1000-01,Fog Chaser,3.99,52,monthly
+P1000-02,Cappuccino,3.99,71,monthly
+P1000-03,Dark Roast,3.99,80,monthly
+P1000-04,Columbian,3.99,66,monthly
+P1000-05,Black Tea,3.99,69,monthly
