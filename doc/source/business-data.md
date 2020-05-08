@@ -223,6 +223,8 @@ Click the `Save` icon in the top menu to save your dashboard.
 
 ## Whats Next?
 
-|         |            |   |
-| ------------- |:-------------:| -----:|
-| <div style="width:300px">![Previous](images/previous.png)</div>| <div style="width:300px">![Previous](images/main_page.png)</div>|<div style="width:300px">![Previous](images/next.png)</div> |
+<div>
+<span style="width:33%;float:left;"><img src="images/previous.png"/></span>
+<span style="width:33%;float:left;"><img src="images/main_page.png"/></span>
+<span style="width:33%;float:right"><img src="images/next.png"/></span>
+</div>
