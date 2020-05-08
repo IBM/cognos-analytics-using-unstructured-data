@@ -223,7 +223,7 @@ Click the `Save` icon in the top menu to save your dashboard.
 
 ## Whats Next?
 
-<style>
+<style type="text/css">
 .button {
     width:33%;
     float:left;
