@@ -223,14 +223,8 @@ Click the `Save` icon in the top menu to save your dashboard.
 
 ## Whats Next?
 
-<style type="text/css">
-.button {
-    width:33%;
-    float:left;
-}
-</style>
-<div>
-<span class="button"><img src="images/previous.png"/></span>
-<span class="button"><img src="images/main_page.png"/></span>
-<span class="button"><img src="images/next.png"/></span>
-</div>
+<table width="100%">
+<tr><td><img src="images/previous.png"/></td><td><img src="images/main_page.png"/></td>
+<td><img src="images/next.png"/></td>
+</tr>
+</table>
