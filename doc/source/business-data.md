@@ -225,4 +225,4 @@ Click the `Save` icon in the top menu to save your dashboard.
 
 |         |            |   |
 | ------------- |:-------------:| -----:|
-| <div style="width:300px">![Previous](images/previous.png)</div>| <div style="width:300px">![Previous](images/previous.png)</div>|<div style="width:300px">![Previous](images/previous.png)</div> |
+| <div style="width:300px">![Previous](images/previous.png)</div>| <div style="width:300px">![Previous](images/main_page.png)</div>|<div style="width:300px">![Previous](images/next.png)</div> |
