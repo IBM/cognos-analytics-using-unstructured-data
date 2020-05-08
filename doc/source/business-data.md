@@ -222,7 +222,7 @@ Congratulations! You have now completed the creation of inventory dashboard. The
 Click the `Save` icon in the top menu to save your dashboard.
 
 ## Whats Next?
-<table>
+<table border="0">
   <tbody>
     <tr>
       <td align="left"><img src="images/previous.png"/><br/>
