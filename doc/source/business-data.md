@@ -54,6 +54,7 @@ From the command prompt go to the `lib` folder in your project directory. And ru
 cd lib/db/
 node generate-product-business-data.js
 ```
+This will create schema, assign relationships and load the product and sales data to the database.
 
 ## 4. Create database connection in Cognos Analytics
 
@@ -127,7 +128,7 @@ Select the dashboard template or any other template that fits your need. We are 
 
 In this section we will create visualizations using the schema and data that we have loaded from IBM Db2 Warehouse.
 
-### 1. Store Locations with Sales
+### 1. Store locations with sales
 
 From the visualization list select map and drag it to the canvas.
 
@@ -142,6 +143,9 @@ From the `Store` table, select `Lat` and `Long` and drag and drop them into `Lat
 To change the style of the map, select `properties` from top right corner, go to `Chart` and expand it. Select `Style` and choose `outdoors` or any that fits your purpose from the dropdown.
 
 ![map style](images/map-style.png)
+
+You can also change the point color range by 
+
 
 Lets give title to the widget. To do so, select the widget and select the `Title` (1) icon from the widget menu and give it an appropriate title.
 
@@ -190,10 +194,35 @@ One of the feature of Cognos Analytics is to add forecasting. In this chart we c
 
 ![calculation](images/forecasting.png)
 
+### 4. Product Monthly Sales
+
+Next chart we will be creating is `Product Monthly Sales`. This will help us determine and relate the inventory which is inversely porportional to the sales.
+
+1- Select `Product Name` from `Product` table,`Sale Date`,`Amount` from `Sales` table, drag and drop them to the empty area of the canvas.
+
+2- You can maximize the widget while you are working on it. Select the `sale_date_month` calculation and replace the `Sale Date` from the fields. We need to do this to get the sales monthly.
+
+3- Change the chart by select the widget menu and changing it to a `Column` chart.
+
+4- You can change the color by selecting from the existing color pallete from the properties.
+
+5- Also rename the `Item axis title` to `Months`.
+
+6- Finally provide a title `Product Monthly Sales` to the widget.
+
+
+![calculation](images/product-monthly-sales.gif)
+
 ### Complete and Save
 
-Congratulations! You have now completed the creation of inventory dashboard. The final visualization should like below:
+Congratulations! You have now completed the creation of inventory dashboard. The final visualization should look like below:
 
 ![calculation](images/final-dashboard.png)
 
-Click the `Save` icon in the top mentu to save your dashboard.
+Click the `Save` icon in the top menu to save your dashboard.
+
+## Whats Next?
+
+|         |            |   |
+| ------------- |:-------------:| -----:|
+| <div style="width:300px">![Previous](images/previous.png)</div>| <div style="width:300px">![Previous](images/previous.png)</div>|<div style="width:300px">![Previous](images/previous.png)</div> |
