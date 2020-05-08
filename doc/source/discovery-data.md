@@ -245,12 +245,15 @@ To create your dashboard, you will need to become knowledgeable with the numerou
 
 From the image above:
 
-* 1 - toggles you between edit and preview mode.
-* 2 - an example of one of many drop-down menus associated with data objects.
-* 3 - displays the relationship between all of the visual objects on your dashboard. Objects with the same number are related.
-* 4 - toggles full-screen mode on and off.
-* 5 - displays the fields associated with the selected visual object.
-* 6 - properties associated with the selected visual object.
+* [1] Toggles you between edit and preview mode.
+* [2] Toggles display of the resouces (data objects) in the data module.
+* [3] An example of one of many drop-down menus associated with data objects.
+* [4] Displays the relationship between all of the visual objects on your dashboard. Objects with the same number are related.
+* [5] Toggles full-screen mode on and off.
+* [6] Toggles display of the filter panels.
+* [7] Displays the fields associated with the selected visual object.
+* [8] Displays the properties associated with the selected visual object.
+* [9] Filters that can be applied to dashboard visual objects. The filter can be set for all dashboard tabs (left side), or for the current tab (righ side).
 
 The types of visualizations available include the following:
 
