@@ -225,7 +225,7 @@ Click the `Save` icon in the top menu to save your dashboard.
 <table border="0">
   <tbody>
     <tr>
-      <td align="left"><img src="images/previous.png"/><br/>
+      <td align="left">[<img src="images/previous.png"/>](discovery-data.md)<br/>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -235,7 +235,7 @@ Click the `Save` icon in the top menu to save your dashboard.
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>    
         <span>&nbsp;&nbsp;</span>
       </td>
-      <td align="center"><img src="images/previous.png"/><br/>
+      <td align="center">[<img src="images/main_page.png"/>](https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/README.md)<br/>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -245,7 +245,7 @@ Click the `Save` icon in the top menu to save your dashboard.
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;</span>
       </td>
-      <td align="right"><img src="images/previous.png"/><br/>
+      <td align="right">[<img src="images/next.png"/>](https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/README.md)<br/>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
