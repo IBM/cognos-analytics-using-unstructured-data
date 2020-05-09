@@ -221,16 +221,40 @@ Congratulations! You have now completed the creation of inventory dashboard. The
 
 Click the `Save` icon in the top menu to save your dashboard.
 
-## Whats Next?
-
-|         |            |   |
-| ------------- |:-------------:| -----:|
-| <div style="width:300px">![Previous](images/previous.png)</div>| <div style="width:300px">![Previous](images/main_page.png)</div>|<div style="width:300px">![Previous](images/next.png)</div> |
-
-
-<div>
-
-<div style="width:300px">![Previous](images/previous.png)</div>
-<div style="width:300px">![Previous](images/main_page.png)</div>
-<div style="width:300px">![Previous](images/next.png)</div>
-</div>
+### Whats Next?
+<table border="0">
+  <tbody>
+    <tr>
+      <td align="left"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/doc/source/discovery-data.md"><img src="images/previous.png"/></a><br/>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>    
+        <span>&nbsp;&nbsp;</span>
+      </td>
+      <td align="center"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/README.md"><img src="images/main_page.png"/></a><br/>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>        
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;</span>
+      </td>
+      <td align="right"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/README.md"><img src="images/next.png"/></a><br/>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>    
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>     
+        <span>&nbsp;&nbsp;</span>        
+      </td>
+    </tr>
+  </tbody>
+</table>
