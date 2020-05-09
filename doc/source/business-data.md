@@ -2,18 +2,13 @@
 
 In this section, we will walk you through the process of creating sales, store and inventory data to support our coffee company products and upload these business data into Db2 Warehouse schema, then use Cognos Analytics to connect to IBM Db2 Warehouse on cloud and dynamically create additional Cognos Analytics dashboards to visualize the business data loaded from IBM Db2 Warehouse.
 
+![architecture-db2](images/architecture-db2.png)
+
 ## Flow
 
-
-## Included components
-
-* [Cognos Analytics](https://www.ibm.com/products/cognos-analytics): A business intelligence solution that empowers users with AI-infused self-service capabilities that accelerate data preparation, analysis, and repot creation.
-* [Watson Discovery](https://www.ibm.com/watson/services/discovery/): A cognitive search and content analytics engine for applications to identify patterns, trends, and actionable insights.
-* [IBM Db2 Warehouse](https://www.ibm.com/products/db2-warehouse): A client-managed, highly flexible operational data warehouse for private clouds and containerized deployments.
-
-## Featured technologies
-
-* [Node.js](https://nodejs.org/): An open-source JavaScript run-time environment for executing server-side JavaScript code.
+1. Product and business data is loaded into Db2 Warehouse tables.
+2. User runs Cognos Analytics.
+3. Cognos Analytics is linked to the Db2 Warehouse instance.
 
 ## Steps
 
@@ -27,7 +22,6 @@ In this section, we will walk you through the process of creating sales, store a
 1. [Run Cognos Analytics to visualize data](#6-run-cognos-analytics-to-visualize-data)
 
 >If you have come here without completing the first tutorial please click [here](doc/source/discovery-data.md) to begin.
-
 
 ## 1. Create IBM Db2 Warehouse service on IBM Cloud
 
