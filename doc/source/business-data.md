@@ -52,24 +52,17 @@ This will create schema, assign relationships and load the product and sales dat
 
 ## 4. Create database connection in Cognos Analytics
 
-From the home page of Cognos Analytics, select `Manage` from the lower left corner  and click `Data Server Connections`.
-
-![Data Server Connections](images/ca-manage-db2-connection.png)
-
-Click `+` button to add new connection:
-
-![Db2 Warehouse Connections](images/add-db2wh-connection.png)
-
+1. From the home page of Cognos Analytics, select `Manage` from the lower left corner  and click `Data Server Connections`.
+1. Click `+` button to add new connection:
 1. select `IBM Db2 Warehouse` from the list
-2. Copy and paste the `ssljdbcurl` from the Db2 Warehouse service credentials that you have saved earlier in the `JDBC URL` field
-3. Add username/password Credentials by selecting `Use the following sign on`.
-
-![Db2 Warehouse Connections](images/add-creds-test-conn.png)
-
+1. Copy and paste the `ssljdbcurl` from the Db2 Warehouse service credentials that you have saved earlier in the `JDBC URL` field
+1. Add username/password Credentials by selecting `Use the following sign on`.
 1. Click `+` to add a new sign on.
-2. Enter the username and password from the Db2 Warehouse service credentials that you have saved earlier
-3. Click the `Test` link to make sure the connection is successful.
-4. Give a name to your connection and click `Save`.
+1. Enter the username and password from the Db2 Warehouse service credentials that you have saved earlier
+1. Click the `Test` link to make sure the connection is successful.
+1. Give a name to your connection and click `Save`.
+
+![Db2 Warehouse Connections](images/add-database-connection.gif)
 
 ## 5. Load metadata from the connected Database
 
@@ -77,38 +70,20 @@ Once the connection is successful, you need to load the metadata from the databa
 
 ![Load metadata](images/load-metadata.png)
 
-## 6. Create data module
+## 6. Create a data module
 
-From the home page, select `+` icon in the lower left corner. Select `Data Module`.
+1. From the home page, select `+` icon in the lower left corner. Select `Data Module`.
+1. From the source selection panel, select the data connection that you created in `step 4`,
+1. Select the metadata that was loaded in the next step. and click `OK`
+1. `Select Tables` in the next dialog selection and click `Next`. You will see the all the tables and data are loaded in the left navigation bar.
+1. Select all tables in the next screen, and click `OK`.
+1. Then save the data module.
+1. In this view of the data module, you can also see that all the relationships defined in the database is also pulled when you loaded the metadata. You can see that by clicking the `Relationships` tab from the tab menu.
 
-![New Data module](images/new-datamodule.png)
-
-From the source selection panel, select the data connection that you created in `step 4`,
-
-![Data module](images/dm-select-conn.png)
-
-Select the metadata that was loaded in the next step. and click `OK`
-
-![Data module](images/dm-select-source.png)
-
-`Select Tables` in the next dialog selection and click `Next`. You will see the all the tables and data are loaded in the left navigation bar.
-
-![Select Tables](images/add-table.png)
-
-Select all tables in the next screen, and click `OK`.
-
-![Select Tables](images/select-all-table.png)
-
-Then save the data module.
-
-![Select Tables](images/save-dm.png)
-
-In this view of the data module, you can also see that all the relationships defined in the database is also pulled when you loaded the metadata. You can see that by clikcing the `Relationships` tab from the tab menu.
-
-![Select Tables](images/dm-relationships.png)
+![Add Data Module](images/create-data-module.gif)
 
 
-## 7. Create dashboard
+## 7. Create a dashboard
 
 From the home page, select `+` icon in the lower left corner. Select `Dashboard`.
 
@@ -149,38 +124,30 @@ You can also change the name of the tab by selecting the tab and editing the tex
 
 ### 2. Sales by Store
 
-From the data module, select `Store Name` (1) from `Store` table and `Sale Date` (2), `Amount` (3) from `Sales` table and drag and drop them to the canvas. To make working with the widget easier, you can maximize the widget by clicking maximize button. The chart you will see has daily store sales.
+In the next visualization we will create Sales by Store column chart. Before that lets create a calculation that is required by the chart. The calculation selects month from the `Sale Date` column so that we can group the sales by month. The calculatin can be used as a column.
 
-![map](images/store-monthly-sales-graph.png)
+1. Select `Sales` table and click the three dots on the right of it and click New `Calculation...`.
+1. It opens up a dialog box. In the expression text box, write the `_month` function with `SALE_DATE` as parameter to the `_month` function as show below. Or you can drag and drop `Sale Date` in between the parenthesis of `_month`.  
+1. Provide a name to the calculation as `sale_date_month`
+1. You can preview the output of the expression by clicking the eye icon.
+1. click `OK` when done. 
 
-We want to show monthly store sales. To do show we need to extract months from the `Sale Date`. For this we need to add a calculation that uses the inbuilt month function `_month()`.
+![calculation](images/create-a-calculation.gif)
 
-Create calculation by clicking the three dots on the right side of the `Sales` and click New `Calculation...`
+Lets now create the `Sales by Store` chart
 
-![calculation](images/create-calculation.png)
+1. From the data module, select `Store Name` (1) from `Store` table and `Sale Date` (2), `Amount` (3) from `Sales` table and drag and drop them to the canvas. To make working with the widget easier, you can maximize the widget by clicking maximize button. The chart you will see has daily store sales.
+1. To change the daily sales to monhtly sales you need to now use the calculation as a column. Drag the calculation and replace the `Sale Date` from the fields.
+1. Now you will see the monthly store sales in the chart. The axis label by default is the same name as calculations or the column name used in the data module. To change the axis label, click widget `Properties` from the top right corner, select `Axis` and enter a name `Months` in `Item axis title`
+1. Change the chart type to `Column` from the widget menu.
+1. Provide a title `Sales By Store` to the widget
 
-It opens up a dialog box. 
-1. In the expression text box, write the `_month` function with `SALE_DATE` as parameter to it as show in the diagram below. Or you can drag and drop `Sale Date` in between the parenthesis of `_month`.  
+![Sales by  Store](images/create-sales-by-store.gif)
 
-2. Provide a name to the calculatin as `sale_date_month`
-
-3. You can preview the output of the expression by clicking the eye icon.
-
-![calculation](images/sale_date_month_calc.png)
-
-click `OK` when done.
-
-To change the daily sales to monhtly sales you need to now use the calculation as a column. Drag the calculation and replace the `Sale Date` from the fields.
-
-![calculation](images/add-calc-as-column.png)
-
-Now you will see the monthly store sales in the chart. The axis label by default is the same name as calculations or the column name used in the data module. To change the axis label, click widget `Properties` from the top right corner, select `Axis` and enter a name `Months` in `Item axis title`
-
-![Axis title](images/change-axis-label.png)
 
 ### 3. Product monthly inventory
 
-Next visualization we will create is the product monthly inventory. 
+Next visualization we will create is the `Product Monthly Inventory`. 
 
 1- From the data module left navigation, select `Product Name` from `Product` table, `Item  Stock Date` and `Quanity` from `Product Warehouse` table and drag it to the canvas. You will see that by default it creates a line graph that shows monthly inventory of each product.
 
@@ -211,7 +178,7 @@ Next chart we will be creating is `Product Monthly Sales`. This will help us det
 
 Congratulations! You have now completed the creation of inventory dashboard. The final visualization should look like below:
 
-![Final Dashboard](images/final-dashboard.png)
+![Final Dashboard](images/bd-final-dashboard.png)
 
 Click the `Save` icon in the top menu to save your dashboard.
 
