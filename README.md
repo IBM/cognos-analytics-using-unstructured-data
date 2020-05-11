@@ -70,6 +70,8 @@ In this section, we build on the first section by adding:
 
 Click [here](doc/source/business-data.md) to begin.
 
+![Final Dashboard](doc/source/images/final-dashboard.png)
+
 # License
 
 This code pattern is licensed under the Apache Software License, Version 2.  Separate third party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1 (DCO)](https://developercertificate.org/) and the [Apache Software License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).

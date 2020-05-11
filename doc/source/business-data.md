@@ -188,7 +188,6 @@ Next visualization we will create is the product monthly inventory.
 
 ![Product Monthly Inventory](images/product-monthly-inventory.gif)
 
-
 ### 4. Product Monthly Sales
 
 Next chart we will be creating is `Product Monthly Sales`. This will help us determine and relate the inventory which is inversely porportional to the sales.
@@ -212,7 +211,7 @@ Next chart we will be creating is `Product Monthly Sales`. This will help us det
 
 Congratulations! You have now completed the creation of inventory dashboard. The final visualization should look like below:
 
-![calculation](images/final-dashboard.png)
+![Final Dashboard](images/final-dashboard.png)
 
 Click the `Save` icon in the top menu to save your dashboard.
 
