@@ -178,7 +178,7 @@ Next chart we will be creating is `Product Monthly Sales`. This will help us det
 
 Congratulations! You have now completed the creation of inventory dashboard. The final visualization should look like below:
 
-![Final Dashboard](images/fina-dashboard.png)
+![Final Dashboard](images/bd-final-dashboard.png)
 
 Click the `Save` icon in the top menu to save your dashboard.
 
