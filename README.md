@@ -70,7 +70,7 @@ In this section, we build on the first section by adding:
 
 Click [here](doc/source/business-data.md) to begin.
 
-![Final Dashboard](doc/source/images/final-dashboard.png)
+![Final Dashboard](doc/source/images/bd-final-dashboard.png)
 
 # License
 
