@@ -186,7 +186,8 @@ Next visualization we will create is the product monthly inventory.
 
 2- One of the feature of Cognos Analytics is to add forecasting. In this chart we can forecast inventory for next couple of months. Click the forecasting icon from the top right corner of the widget and enable the forecasting. For now we will use the default values. The dotted lines in the graph shows forecasted inventories for each product.
 
-![calculation](images/product-monthly-inventory.gif)
+![Product Monthly Inventory](images/product-monthly-inventory.gif)
+
 
 ### 4. Product Monthly Sales
 
