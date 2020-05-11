@@ -124,7 +124,7 @@ You can also change the name of the tab by selecting the tab and editing the tex
 
 ### 2. Sales by Store
 
-In the next visualization we will create Sales by Store column chart. Before that lets create a calculation that is required by the chart. The calculation selects month from the `Sale Date` column so that we can group the sales by month. The calculatin can be used as a column.
+In the next visualization we will create Sales by Store column chart. Before that lets create a calculation that is required by the chart. The calculation selects month from the `Sale Date` column so that we can group the sales by month. The calculation can be used as a column.
 
 1. Select `Sales` table and click the three dots on the right of it and click New `Calculation...`.
 1. It opens up a dialog box. In the expression text box, write the `_month` function with `SALE_DATE` as parameter to the `_month` function as show below. Or you can drag and drop `Sale Date` in between the parenthesis of `_month`.  
