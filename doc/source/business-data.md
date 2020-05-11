@@ -147,7 +147,7 @@ You can also change the name of the tab by selecting the tab and editing the tex
 
 ![map](images/title-tab-name-change.png)
 
-### 2. Store monthly sales
+### 2. Sales by Store
 
 From the data module, select `Store Name` (1) from `Store` table and `Sale Date` (2), `Amount` (3) from `Sales` table and drag and drop them to the canvas. To make working with the widget easier, you can maximize the widget by clicking maximize button. The chart you will see has daily store sales.
 
@@ -180,13 +180,13 @@ Now you will see the monthly store sales in the chart. The axis label by default
 
 ### 3. Product monthly inventory
 
-Next visualization we will create is the product monthly inventory. From the data module left navigation, select `Product Name` from `Product` table, `Item  Stock Date` and `Quanity` from `Product Warehouse` table and drag it to the canvas. You will see that by default it creates a line graph that shows monthly inventory of each product.
+Next visualization we will create is the product monthly inventory. 
 
-![calculation](images/product-monthly-inventory.png)
+1- From the data module left navigation, select `Product Name` from `Product` table, `Item  Stock Date` and `Quanity` from `Product Warehouse` table and drag it to the canvas. You will see that by default it creates a line graph that shows monthly inventory of each product.
 
-One of the feature of Cognos Analytics is to add forecasting. In this chart we can forecast inventory for next couple of months. Click the forecasting icon from the top right corner of the widget and enable the forecasting. For now we will use the default values. The dotted lines in the graph shows forecasted inventories for each product.
+2- One of the feature of Cognos Analytics is to add forecasting. In this chart we can forecast inventory for next couple of months. Click the forecasting icon from the top right corner of the widget and enable the forecasting. For now we will use the default values. The dotted lines in the graph shows forecasted inventories for each product.
 
-![calculation](images/forecasting.png)
+![calculation](images/product-monthly-inventory.gif)
 
 ### 4. Product Monthly Sales
 
