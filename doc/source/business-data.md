@@ -1,6 +1,6 @@
 # Visualize customer insights with business data for product performance analysis
 
-In this section, we will walk you through the process of creating sales, store and inventory data to support our coffee company products and upload these business data into Db2 Warehouse schema, then use Cognos Analytics to connect to IBM Db2 Warehouse on cloud and dynamically create additional Cognos Analytics dashboards to visualize the business data loaded from IBM Db2 Warehouse.
+In this section, we will walk you through the process of creating sales, store and inventory data to support our coffee company products. The data will be uploaded into a Db2 Db2 Warehouse schema which will then be connected to Cognos Analytics. We will created additional Cognos Analytics dashboards to visualize the business data.
 
 ![architecture-db2](images/architecture-db2.png)
 
@@ -8,20 +8,20 @@ In this section, we will walk you through the process of creating sales, store a
 
 1. Product and business data is loaded into Db2 Warehouse tables.
 2. User runs Cognos Analytics.
-3. Cognos Analytics is linked to the Db2 Warehouse instance.
+3. Cognos Analytics is linked to the Db2 Warehouse instance. The data can then be used to build visualizations on Cognos Analytics dashboards.
 
 ## Steps
 
 1. [Create IBM Db2 Warehouse service on IBM Cloud](#1-create-ibm-db2-warehouse-service-on-ibm-cloud)
-1. [Add db2 service credentials to environment file](#2-add-db2-service-credentials-to-environment-file)
-1. [Run the script to load data to the database](#3-run-the-script-to-load-data-to-the-database)
+1. [Add Db2 service credentials to environment file](#2-add-db2-service-credentials-to-environment-file)
+1. [Run scripts to load data into the database](#3-run-scripts-to-load-data-into-the-database)
 1. [Create database connection in Cognos Analytics](#4-create-database-connection-in-cognos-analytics)
-1. [Load metadata from the connected Database](#5-load-metadata-from-the-connected-database)
-1. [Create data module](#6-create-data-module)
-1. [Create dashboard](#7-create-dashboard)
-1. [Run Cognos Analytics to visualize data](#6-run-cognos-analytics-to-visualize-data)
+1. [Load metadata from the connected database](#5-load-metadata-from-the-connected-database)
+1. [Build a Data Module in Cognos Analytics](#6-build-a-data-module-in-cognos-analytics)
+1. [Create a Cognos Analytics dashboard](#7-create-a-cognos-analytics-dashboard)
+1. [Add visualizations to the dashboard](#8-add-visualizations-to-the-dashboard)
 
->If you have come here without completing the first tutorial please click [here](doc/source/discovery-data.md) to begin.
+>**Important**: These instructions assume you have completed the first section of this code pattern. if not, please return to the first section by clicking [here](doc/source/discovery-data.md).
 
 ## 1. Create IBM Db2 Warehouse service on IBM Cloud
 
@@ -29,148 +29,181 @@ Create the IBM Db2 Warehouse on Cloud service and make sure to note the credenti
 
 * [**IBM Db2 Warehouse on Cloud**](https://cloud.ibm.com/catalog/services/db2-warehouse)
 
-## 2. Add db2 service credentials to environment file
+## 2. Add Db2 service credentials to environment file
 
-At this point you must already have a `.env` file in your project directory. Change the value of `DB2wh_DSN` in the `.env` file as shown below:
+Using the same `.env` file you created in the previous section, change the value of `DB2wh_DSN` as shown below:
 
 ```bash
 DB2WH_DSN=<value of ssldsn>
 ```
 
+The value can be copied from the `Service credentials` panel of your Db2 Wareshouse service.
+
 ![db2warehouse-credentials](images/db2wh-service-creds.png)
 
+## 3. Run the script to load data into the database
 
-## 3. Run the script to load data to the database
-
-From the command prompt go to the `lib` folder in your project directory. And run the following command to load business data to IBM Db2 Warehouse on cloud:
+From the command prompt, go to the `lib/db` folder in your project directory and run the script to load business data into your IBM Db2 Warehouse service:
 
 ```bash
 cd lib/db/
 node generate-product-business-data.js
 ```
-This will create schema, assign relationships and load the product and sales data to the database.
+
+This will create the schema, assign relationships, and load the product and sales data into the database.
 
 ## 4. Create database connection in Cognos Analytics
 
-1. From the home page of Cognos Analytics, select `Manage` from the lower left corner  and click `Data Server Connections`.
-1. Click `+` button to add new connection:
-1. select `IBM Db2 Warehouse` from the list
-1. Copy and paste the `ssljdbcurl` from the Db2 Warehouse service credentials that you have saved earlier in the `JDBC URL` field
-1. Add username/password Credentials by selecting `Use the following sign on`.
-1. Click `+` to add a new sign on.
-1. Enter the username and password from the Db2 Warehouse service credentials that you have saved earlier
-1. Click the `Test` link to make sure the connection is successful.
-1. Give a name to your connection and click `Save`.
+* From the Cognos Analytics main dashboard, select `Manage` from the lower left corner  and click `Data Server Connections`.
+
+* Click the `+` icon to add a new connection.
+
+* Select `IBM Db2 Warehouse` from the list.
+
+* Copy the `ssljdbcurl` value from the Db2 Warehouse service credentials that you have saved earlier, and paste that into the `JDBC URL` field.
+
+* Add username/password credentials by selecting `Use the following sign on`.
+
+* Click the `+` icon to add a new `sign on`.
+
+* Enter the username and password from your Db2 Warehouse service credentials.
+
+* Click the `Test` link to make sure the connection is successful.
+
+* Give a unique name to your connection and click `Save`.
 
 ![Db2 Warehouse Connections](images/add-database-connection.gif)
 
 ## 5. Load metadata from the connected Database
 
-Once the connection is successful, you need to load the metadata from the database for ex: tables, relationships and data. Select `Schemas` from the tabs, Select the schema `DB2INST1` from the list. Click the three dots on the right and clikc `Load metadata`.
+Once the connection is successful, you will need to load the metadata from the database. This will include tables, relationships and data.
+
+Select `Schemas` from the tab menu, and then select the schema `DB2INST1` from the list. Click the three dots on the right and then click `Load metadata`.
 
 ![Load metadata](images/load-metadata.png)
 
-## 6. Create a data module
+## 6. Build a Data Module in Cognos Analytics
 
-1. From the home page, select `+` icon in the lower left corner. Select `Data Module`.
-1. From the source selection panel, select the data connection that you created in `step 4`,
-1. Select the metadata that was loaded in the next step. and click `OK`
-1. `Select Tables` in the next dialog selection and click `Next`. You will see the all the tables and data are loaded in the left navigation bar.
-1. Select all tables in the next screen, and click `OK`.
-1. Then save the data module.
-1. In this view of the data module, you can also see that all the relationships defined in the database is also pulled when you loaded the metadata. You can see that by clicking the `Relationships` tab from the tab menu.
+* From the Cognos Analytics main dashboard, select the `+` icon in the lower left corner. Select `Data Module`.
+
+* From the source selection panel, select the data connection and metadata that you created in the previous steps. Then click `OK`.
+
+* Click `Select Tables` in the next dialog and click `Next`. You will see all the tables and data loaded in the left navigation bar.
+
+* Select all of the tables in the next screen and click `OK`.
+
+* Click the `Save` icon in the top menu to save off the `Data Module`.
+
+>**Note**: When displaying the data module panel, click on the `Relationships` tab to see that all of the relationships defined in the Db2 Warehouse database have been replicated.
 
 ![Add Data Module](images/create-data-module.gif)
 
+## 7. Create a Cognos Analytics dashboard
 
-## 7. Create a dashboard
-
-From the home page, select `+` icon in the lower left corner. Select `Dashboard`.
+From the Cognos Analytics main dashboad, select the `+` icon in the lower left corner. Select `Dashboard`.
 
 ![New Dashboard](images/new-dashboard.png)
 
-Select the dashboard template or any other template that fits your need. We are going to select the empty template.
+Select the dashboard template or any other template that fits your need. We are going to select the default template, which contains one large drawing area.
 
 ![New Dashboard Template](images/dashboard-template.png)
 
-## 8. Run Cognos Analytics to visualize data
+>**Note**: In this section we will be creating a new `Dashboard` that is associated with our new `Data Module`. This will mean that this dashboard is not connected to the dashboard we created in the previous section of this code pattern. It is, however, possible to have multiple data modules (in our caswe, one for our `csv` files and one for our Db2 Warehouse connection) associated with the same dashboard. If you would like to do that, add the Db2 Warehouse data module to the dashboard you created in the previous section, and simply create a new dashboard tab to hold the new visualizations we will be creating in the following steps.
 
-In this section we will create visualizations using the schema and data that we have loaded from IBM Db2 Warehouse.
+## 8. Add visualizations to the dashboard
 
-### 1. Store locations with sales
+In this section we will create visualizations using the schema and data loaded from our IBM Db2 Warehouse database.
 
-From the visualization list select map and drag it to the canvas.
+### Store locations map with sales data
+
+From the visualization list, select `Map` and drag it onto the canvas.
 
 ![map](images/db-map-store.png)
 
-From the `Store` table, select `Lat` and `Long` and drag and drop them into `Latitude` (1) and `Longitude` (2) fields as shown in the diagram below. To also show the total sales of each store in the map, select `Amount` field from the `Sales` table and, drag and drop them to `Point size` (3) and also `Point color` (4) fields on the right navigation bar. This means that higher the sales amount bigger will be the size of the points that gets displayed in the map.
+With the `Map` visualization object selected, click `Fields` from the top menu.
 
-> Note: To open up the field right navigation select `Fields` from the top right corner.
+Select `Store -> Lat` from the resource list and drag and drop it onto the `Latitude` label [1] in the field list. Do the same for `Store -> Long` and drop onto the `Longitude` label [2].
+
+In order to show the total sales of each store in the map, select `Sales -> Amount` and drag and drop it onto both the `Point size` [3] and `Point color` [4] labels in the field list. This will correlate the size of the store object with the amount of sales the store has (i.e. the higher the sales, the larger the store will be represented).
 
 ![map](images/stores-map-sales.png)
 
-To change the style of the map, select `properties` from top right corner, go to `Chart` and expand it. Select `Style` and choose `outdoors` or any that fits your purpose from the dropdown.
+To change the style of the map, select `Properties` from the top menu, then click on `Chart` to expand it. Change the `Style` value to experiment with different map backgrounds.
 
 ![map style](images/map-style.png)
 
-You can also change the point color range by 
+You can also change the point color range by [NEEDS UPDATE]
 
+Use the `Title` icon to change the title of our visualization object to `Store Location` [1].
 
-Lets give title to the widget. To do so, select the widget and select the `Title` (1) icon from the widget menu and give it an appropriate title.
-
-You can also change the name of the tab by selecting the tab and editing the text.
+You can also change the name of the dashboard tab by selecting the tab and editing the text [2].
 
 ![map](images/title-tab-name-change.png)
 
-### 2. Sales by Store
+### Sales by store
 
-In the next visualization we will create Sales by Store column chart. Before that lets create a calculation that is required by the chart. The calculation selects month from the `Sale Date` column so that we can group the sales by month. The calculation can be used as a column.
+Next we want to show the amount of sales for each of our stores. For this we will use a `Column` visualzation object.
 
-1. Select `Sales` table and click the three dots on the right of it and click New `Calculation...`.
-1. It opens up a dialog box. In the expression text box, write the `_month` function with `SALE_DATE` as parameter to the `_month` function as show below. Or you can drag and drop `Sale Date` in between the parenthesis of `_month`.  
-1. Provide a name to the calculation as `sale_date_month`
-1. You can preview the output of the expression by clicking the eye icon.
-1. click `OK` when done. 
+* Select `Store -> Store Name`, `Sales -> Sale Date`, and `Sales -> Amount` from the resource list and drag and drop them onto the canvas.
 
-![calculation](images/create-a-calculation.gif)
+* Use the default visualization object, which is a `Column` chart.
 
-Lets now create the `Sales by Store` chart
+* To make working with the visualization easier, you can maximize it by clicking on the maximize button.
 
-1. From the data module, select `Store Name` (1) from `Store` table and `Sale Date` (2), `Amount` (3) from `Sales` table and drag and drop them to the canvas. To make working with the widget easier, you can maximize the widget by clicking maximize button. The chart you will see has daily store sales.
-1. To change the daily sales to monhtly sales you need to now use the calculation as a column. Drag the calculation and replace the `Sale Date` from the fields.
-1. Now you will see the monthly store sales in the chart. The axis label by default is the same name as calculations or the column name used in the data module. To change the axis label, click widget `Properties` from the top right corner, select `Axis` and enter a name `Months` in `Item axis title`
-1. Change the chart type to `Column` from the widget menu.
-1. Provide a title `Sales By Store` to the widget
+* The default axis label is the name of the data module field. To change it, click `Properties` from the top menu. Select `Axis` and enter a name `Months` in `Item axis title`.
+
+* Change the title to `Sales By Store`.
 
 ![Sales by  Store](images/create-sales-by-store.gif)
 
+### Product monthly inventory
 
-### 3. Product monthly inventory
+Next we want to show the monthly inventory amounts for each of our products.
 
-Next visualization we will create is the `Product Monthly Inventory`. 
+Select `Product -> Product Name`, `Product Warehouse -> Item Stock Date` and `Product Warehouse -> Quanity` from the resource list and drag and drop them onto the canvas.
 
-1- From the data module left navigation, select `Product Name` from `Product` table, `Item  Stock Date` and `Quanity` from `Product Warehouse` table and drag it to the canvas. You will see that by default it creates a line graph that shows monthly inventory of each product.
+Keep the default visualization object, which is a `Line` graph.
 
-2- One of the feature of Cognos Analytics is to add forecasting. In this chart we can forecast inventory for next couple of months. Click the forecasting icon from the top right corner of the widget and enable the forecasting. For now we will use the default values. The dotted lines in the graph shows forecasted inventories for each product.
+>**Note**: One of the key features of Cognos Analytics is forecasting. In this chart we can click on the `Forecasting` icon to predict inventory amount for the next several months - which will be shown with dotted lines. The icon is located in the top righ corner of the visualization object.
 
 ![Product Monthly Inventory](images/product-monthly-inventory.gif)
 
-### 4. Product Monthly Sales
+### Product Monthly Sales
 
-Next chart we will be creating is `Product Monthly Sales`. This will help us determine and relate the inventory which is inversely porportional to the sales.
+Our last visualization will be to show the montly sales amount for each of our products. This will help provide insight into how much product inventory to carry.
 
-1- Select `Product Name` from `Product` table,`Sale Date`,`Amount` from `Sales` table, drag and drop them to the empty area of the canvas.
+First we will need to create a calculation that will generate a `month` value from the `Sale Date`. This way we can show monthy sales totals for each product.
 
-2- You can maximize the widget while you are working on it. Select the `sale_date_month` calculation and replace the `Sale Date` from the fields. We need to do this to get the sales monthly.
+To create the calculation:
 
-3- Change the chart by select the widget menu and changing it to a `Column` chart.
+* Right-click on the `Sales` table in the resource list and select `Calculation` to bring up the calculation panel.
 
-4- You can change the color by selecting from the existing color pallete from the properties.
+* In the expression text box, use the `_month` function. To set the function parameter, drag and drop `SALE_DATE` inside the function parenthesis.
 
-5- Also rename the `Item axis title` to `Months`.
+* Name the calculation `sale_date_month`.
 
-6- Finally provide a title `Product Monthly Sales` to the widget.
+* Hit the `eye` icon to run the function and view the output.
 
+* Click OK to save the calculation.
+
+![calculation](images/create-a-calculation.gif)
+
+Now that we have our new calculation field, let create our `Product Montly Sales` chart.
+
+* Select `Product -> Product Name`, `Sales -> Sale Date`, and `Sales -> Amount` from the resource list and drag and drop them onto the canvas.
+
+* The default chart will show daily sales amounts. To change the value to monthly sales:
+
+  * Click `Fields` from the top menu.
+  * Replace the `x-axis` field by drag and dropping the `sales_date_month` calculation onto the `x-axis` field. This will replace the original field used, which was `Sale Date`.
+
+* Click `Properties` from the top menu.
+
+* To show sales values in the chart, click on `Chart` and click `Show value labels`.
+
+* To rename the axis label, click on `Axis` and rename the `Item axis title` to `Months`.
+
+* Change the title to `Product Monthly Sales`.
 
 ![calculation](images/product-monthly-sales.gif)
 
