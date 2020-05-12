@@ -72,7 +72,7 @@ This will create the schema, assign relationships, and load the product and sale
 
 * Give a unique name to your connection and click `Save`.
 
-![Db2 Warehouse Connections](images/add-database-connection.gif)
+![dm-2-add-database-connection](images/dm-2-add-database-connection.gif)
 
 ## 5. Load metadata from the connected Database
 
@@ -80,7 +80,7 @@ Once the connection is successful, you will need to load the metadata from the d
 
 Select `Schemas` from the tab menu, and then select the schema `DB2INST1` from the list. Click the three dots on the right and then click `Load metadata`.
 
-![Load metadata](images/load-metadata.png)
+![dm-2-load-metadata](images/dm-2-load-metadata.png)
 
 ## 6. Build a Data Module in Cognos Analytics
 
@@ -94,21 +94,21 @@ Select `Schemas` from the tab menu, and then select the schema `DB2INST1` from t
 
 * Click the `Save` icon in the top menu to save off the `Data Module`.
 
->**Note**: When displaying the data module panel, click on the `Relationships` tab to see that all of the relationships defined in the Db2 Warehouse database have been replicated.
+* From the data module panel, click on the `Relationships` tab to see that all of the relationships defined in the Db2 Warehouse database have been replicated.
 
-![Add Data Module](images/create-data-module.gif)
+![dm-2-create-data-module](images/dm-2-create-data-module.gif)
 
 ## 7. Create a Cognos Analytics dashboard
 
-From the Cognos Analytics main dashboad, select the `+` icon in the lower left corner. Select `Dashboard`.
+From the current data module panel, select the `+` icon in the lower left corner. Select `Dashboard`.
 
-![New Dashboard](images/new-dashboard.png)
+![db-2-new-dashboard](images/db-2-new-dashboard.png)
 
 Select the dashboard template or any other template that fits your need. We are going to select the default template, which contains one large drawing area.
 
-![New Dashboard Template](images/dashboard-template.png)
+![db-2-dashboard-template](images/db-2-dashboard-template.png)
 
->**Note**: In this section we will be creating a new `Dashboard` that is associated with our new `Data Module`. This will mean that this dashboard is not connected to the dashboard we created in the previous section of this code pattern. It is, however, possible to have multiple data modules (in our caswe, one for our `csv` files and one for our Db2 Warehouse connection) associated with the same dashboard. If you would like to do that, add the Db2 Warehouse data module to the dashboard you created in the previous section, and simply create a new dashboard tab to hold the new visualizations we will be creating in the following steps.
+>**Note**: In this section we will be creating a new `Dashboard` that is associated with our new `Data Module`. This will mean that this dashboard is not connected to the dashboard we created in the previous section of this code pattern. It is, however, possible to have multiple data modules (in our example, one for our `csv` files and one for our Db2 Warehouse connection) associated with the same dashboard. If you would like to do that, connect the Db2 Warehouse data module to the dashboard you created in the previous section, and simply create a new dashboard tab to hold the new visualizations we will be creating in the following steps.
 
 ## 8. Add visualizations to the dashboard
 
@@ -118,7 +118,7 @@ In this section we will create visualizations using the schema and data loaded f
 
 From the visualization list, select `Map` and drag it onto the canvas.
 
-![map](images/db-map-store.png)
+![/db-2-map-store](images/db-2-map-store.png)
 
 With the `Map` visualization object selected, click `Fields` from the top menu.
 
@@ -126,11 +126,11 @@ Select `Store -> Lat` from the resource list and drag and drop it onto the `Lati
 
 In order to show the total sales of each store in the map, select `Sales -> Amount` and drag and drop it onto both the `Point size` [3] and `Point color` [4] labels in the field list. This will correlate the size of the store object with the amount of sales the store has (i.e. the higher the sales, the larger the store will be represented).
 
-![map](images/stores-map-sales.png)
+![db-2-stores-map-sales](images/db-2-stores-map-sales.png)
 
 To change the style of the map, select `Properties` from the top menu, then click on `Chart` to expand it. Change the `Style` value to experiment with different map backgrounds.
 
-![map style](images/map-style.png)
+![db-2-map-style](images/db-2-map-style.png)
 
 You can also change the point color range by [NEEDS UPDATE]
 
@@ -138,7 +138,7 @@ Use the `Title` icon to change the title of our visualization object to `Store L
 
 You can also change the name of the dashboard tab by selecting the tab and editing the text [2].
 
-![map](images/title-tab-name-change.png)
+![db-2-title-tab-name-change](images/db-2-title-tab-name-change.png)
 
 ### Sales by store
 
@@ -154,7 +154,7 @@ Next we want to show the amount of sales for each of our stores. For this we wil
 
 * Change the title to `Sales By Store`.
 
-![Sales by  Store](images/create-sales-by-store.gif)
+![db-2-create-sales-by-store](images/db-2-create-sales-by-store.gif)
 
 ### Product monthly inventory
 
@@ -166,7 +166,7 @@ Keep the default visualization object, which is a `Line` graph.
 
 >**Note**: One of the key features of Cognos Analytics is forecasting. In this chart we can click on the `Forecasting` icon to predict inventory amount for the next several months - which will be shown with dotted lines. The icon is located in the top righ corner of the visualization object.
 
-![Product Monthly Inventory](images/product-monthly-inventory.gif)
+![db-2-product-monthly-inventory](images/db-2-product-monthly-inventory.gif)
 
 ### Product Monthly Sales
 
@@ -186,7 +186,7 @@ To create the calculation:
 
 * Click OK to save the calculation.
 
-![calculation](images/create-a-calculation.gif)
+![db-2-create-a-calculation](images/db-2-create-a-calculation.gif)
 
 Now that we have our new calculation field, let create our `Product Montly Sales` chart.
 
@@ -205,13 +205,13 @@ Now that we have our new calculation field, let create our `Product Montly Sales
 
 * Change the title to `Product Monthly Sales`.
 
-![calculation](images/product-monthly-sales.gif)
+![db-2-product-monthly-sales](images/db-2-product-monthly-sales.gif)
 
 ### Complete and Save
 
 Congratulations! You have now completed the creation of inventory dashboard. The final visualization should look like below:
 
-![Final Dashboard](images/bd-final-dashboard.png)
+![db-2-final-dashboard](images/db-2-final-dashboard.png)
 
 Click the `Save` icon in the top menu to save your dashboard.
 
