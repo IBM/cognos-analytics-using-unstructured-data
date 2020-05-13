@@ -57,22 +57,7 @@ In this section, we walk through the steps to:
 * Query Watson Discovery to capture keywords and sentiment
 * Upload data into Cognos Analytics to create data modules and dashboard visualizations
 
-<table border="0">
-  <tbody>
-    <tr>
-      <td align="left"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/doc/source/discovery-data.md"><img src="doc/source/images/proceed-to-section-1.png"/></a><br/>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>&nbsp;&nbsp;</span>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/doc/source/discovery-data.md"><img src="doc/source/images/proceed-to-section-1.png"/>
 
 ### Section 2. Visualize customer insights with business data for product performance analysis
 
@@ -85,22 +70,7 @@ In this section, we build on the first section by adding:
 * Connect the Db2 Warehouse to Cognos Analytics
 * Create additional Cognos Analytics dashboards to visualize business data
 
-<table border="0">
-  <tbody>
-    <tr>
-      <td align="left"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/doc/source/business-data.md"><img src="doc/source/images/proceed-to-section-2.png"/></a><br/>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <span>&nbsp;&nbsp;</span>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/doc/source/business-data.md"><img src="doc/source/images/proceed-to-section-2.png"/>
 
 
 # License
