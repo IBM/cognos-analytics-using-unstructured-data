@@ -48,7 +48,7 @@ To better organize the content, this code pattern is divided into the following 
 
 ### 1. Visualize unstructured data from Watson Discovery in the Cognos Analytics Dashboard
 
-![Final Dashboard](doc/source/images/coffee-db.png)
+![db-1-final-dashboard](doc/source/images/db-1-final-dashboard.png)
 
 In this section, we walk through the steps to:
 
@@ -57,12 +57,11 @@ In this section, we walk through the steps to:
 * Query Watson Discovery to capture keywords and sentiment
 * Upload data into Cognos Analytics to create data modules and dashboard visualizations
 
-
 Click [here](doc/source/discovery-data.md) to begin.
 
 ### 2. Visualize customer insights with business data for product performance analysis
 
-![Final Dashboard](doc/source/images/bd-final-dashboard.png)
+![db-2-final-dashboar](doc/source/images/db-2-final-dashboard.png)
 
 In this section, we build on the first section by adding:
 

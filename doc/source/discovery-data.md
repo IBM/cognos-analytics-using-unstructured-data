@@ -53,7 +53,7 @@ Click on `View Details` from the options menu associated with your Discovery ser
 
 Click on `Open Watson Discovery`.
 
-  ![open-disco](images/open-disco.png)
+  ![disco-open](images/disco-open.png)
 
 ### Create a project and collection
 
@@ -77,7 +77,7 @@ Be patient as this process make take several minutes.
 
 To access the collection, make sure you are in the correct project, then click the `Manage Collections` tab in the left-side of the panel.
 
-  ![project-collections-cpd](images/project-collections.png)
+  ![disco-project-collections-cpd](images/disco-project-collections.png)
 
 Click the collection tile to access it.
 
@@ -201,25 +201,25 @@ From the main dashboard, select the `+` icon in the lower left corner. Select `D
 
 From the source selection panel, select all 3 files and click `OK`.
 
-  ![dm-source-selection](images/dm-source-selection.png)
+  ![dm-1-source-selection](images/dm-1-source-selection.png)
 
 The `Data module`panel will be displayed, with the 3 files listed in the left-hand resource list.
 
 Select the `Relationships` tab from the content panel to view the files in the graphic editor. At this point, no relationships will exist.
 
-  ![dm-relationships-before](images/dm-relationships-before.png)
+  ![dm-1-relationships-before](images/dm-1-relationships-before.png)
 
 To create a relationship, right click on the `out-products.csv` file to bring up the context menu. Select `Relationship...`.
 
-  ![dm-add-relationship](images/dm-add-relationship.png)
+  ![dm-1-add-relationship](images/dm-1-add-relationship.png)
 
 From the `Relationship` panel, select `out-reviews.csv` in the `Table 2` drop-down list. Then select `ProductId` for both tables to connect them. Then select the `Match selected columns` button to view the relationship. Click `OK` to save.
 
-  ![dm-assign-relationship](images/dm-assign-relationship.png)
+  ![dm-1-assign-relationship](images/dm-1-assign-relationship.png)
 
 Repeat the process linking the `out-products.csv` file with `out-keywords.csv`. The end result should result in the following:
 
-  ![dm-relationships-after](images/dm-relationships-after.png)
+  ![dm-1-relationships-after](images/dm-1-relationships-after.png)
 
 Click the `Save` icon in the top menu to save off the `Data module`.
 
