@@ -235,9 +235,16 @@ Click `Select a source` to bring up the selction dialog. Select the `Data module
 
   ![db-1-select-source](images/db-1-select-source.png)
 
-Now you should see a blank canvas to create your dashboard. The data files and field names will be displayed in the left-side resource list.
+Now you should see a blank canvas to create your dashboard.
 
   ![db-1-blank](images/db-1-blank.png)
+
+From the image above:
+
+* [1] The data module currently associated with the dashboard.
+* [2] The resources included in the data module.
+* [3] The dashboard canvas.
+* [4] The tabs defined for the dashboard.
 
 To create your dashboard, you will need to become knowledgeable with the numerous tools available from icons and pop-up menus.
 
@@ -433,6 +440,12 @@ Congratulations! You have completed your first Cognos Analytics dashboard. The l
   ![db-1-final-layout](images/db-1-final-layout.png)
 
 Click the `Save` icon in the top menu to save your dashboard.
+
+#### Dashboard navigation
+
+Now that all of your visualization are defined and linked correctly, you can manipulate the dashboard using your mouse. If you click on a product name, all of the visualization will change to focus on that product. The same is true if you click on a store name.
+
+The purpose for the `Product list box` was to provide a focal point for selecting a product, but this can also be achieved by selecting the product name from any of the other visualizations.
 
 ## 9. Update Data Module
 
