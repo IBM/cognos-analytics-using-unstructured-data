@@ -224,7 +224,7 @@ Just like the dashboard we created in the first section, now that all of your vi
 <table border="0">
   <tbody>
     <tr>
-      <td align="left"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/doc/source/discovery-data.md"><img src="images/return-to-previous-section.png"/></a><br/>
+      <td align="left"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/master/doc/source/discovery-data.md"><img src="images/return-to-previous-section.png"/></a><br/>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -244,7 +244,7 @@ Just like the dashboard we created in the first section, now that all of your vi
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;</span>
       </td>
-      <td align="right"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/README.md"><img src="images/return-to-main-readme.png"/></a><br/>
+      <td align="right"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data"><img src="images/return-to-main-readme.png"/></a><br/>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
