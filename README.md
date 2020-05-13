@@ -16,13 +16,11 @@ In this code pattern, unstructured data consisting of product reviews and custom
 
 Here is an example of the types of visualzations we will be creating in this code pattern:
 
-  ![db-1-final-layout](doc/source/images/coffee-db.png)
+![dashboards](doc/source/images/dashboards.png)
 
-## Architecture
+## Architecture flow
 
 ![architecture](doc/source/images/architecture.png)
-
-## Flow
 
 1. Product Review data is loaded into Watson Discovery for enrichment. Results include sentiment analysis and keyword discovery.
 2. (Optional) Product and business data is loaded into Db2 Warehouse tables.
@@ -50,6 +48,8 @@ To better organize the content, this code pattern is divided into the following 
 
 ### 1. Visualize unstructured data from Watson Discovery in the Cognos Analytics Dashboard
 
+![db-1-final-dashboard](doc/source/images/db-1-final-dashboard.png)
+
 In this section, we walk through the steps to:
 
 * Gather product review data
@@ -61,6 +61,8 @@ Click [here](doc/source/discovery-data.md) to begin.
 
 ### 2. Visualize customer insights with business data for product performance analysis
 
+![db-2-final-dashboar](doc/source/images/db-2-final-dashboard.png)
+
 In this section, we build on the first section by adding:
 
 * Sales, store and inventory data to support our coffee company product data
@@ -69,8 +71,6 @@ In this section, we build on the first section by adding:
 * Create additional Cognos Analytics dashboards to visualize business data
 
 Click [here](doc/source/business-data.md) to begin.
-
-![Final Dashboard](doc/source/images/bd-final-dashboard.png)
 
 # License
 

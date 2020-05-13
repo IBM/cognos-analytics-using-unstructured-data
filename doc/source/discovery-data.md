@@ -19,7 +19,7 @@ In this section, we will walk you through the process of loading unstructured da
 1. [Run scripts to generate data](#5-run-scripts-to-generate-data)
 1. [Build a Data Module in Cognos Analytics](#6-build-a-data-module-in-cognos-analytics)
 1. [Create a Cognos Analytics dashboard](#7-create-a-cognos-analytics-dashboard)
-1. [Add visualizations to the Dashboard](#8-add-visualizations-to-the-dashboard)
+1. [Add visualizations to the dashboard](#8-add-visualizations-to-the-dashboard)
 1. [Update Data Module](#9-update-data-module)
 
 ## 1. Clone the repo
@@ -53,7 +53,7 @@ Click on `View Details` from the options menu associated with your Discovery ser
 
 Click on `Open Watson Discovery`.
 
-  ![open-disco](images/open-disco.png)
+  ![disco-open](images/disco-open.png)
 
 ### Create a project and collection
 
@@ -77,7 +77,7 @@ Be patient as this process make take several minutes.
 
 To access the collection, make sure you are in the correct project, then click the `Manage Collections` tab in the left-side of the panel.
 
-  ![project-collections-cpd](images/project-collections.png)
+  ![disco-project-collections-cpd](images/disco-project-collections.png)
 
 Click the collection tile to access it.
 
@@ -201,25 +201,25 @@ From the main dashboard, select the `+` icon in the lower left corner. Select `D
 
 From the source selection panel, select all 3 files and click `OK`.
 
-  ![dm-source-selection](images/dm-source-selection.png)
+  ![dm-1-source-selection](images/dm-1-source-selection.png)
 
 The `Data module`panel will be displayed, with the 3 files listed in the left-hand resource list.
 
 Select the `Relationships` tab from the content panel to view the files in the graphic editor. At this point, no relationships will exist.
 
-  ![dm-relationships-before](images/dm-relationships-before.png)
+  ![dm-1-relationships-before](images/dm-1-relationships-before.png)
 
 To create a relationship, right click on the `out-products.csv` file to bring up the context menu. Select `Relationship...`.
 
-  ![dm-add-relationship](images/dm-add-relationship.png)
+  ![dm-1-add-relationship](images/dm-1-add-relationship.png)
 
 From the `Relationship` panel, select `out-reviews.csv` in the `Table 2` drop-down list. Then select `ProductId` for both tables to connect them. Then select the `Match selected columns` button to view the relationship. Click `OK` to save.
 
-  ![dm-assign-relationship](images/dm-assign-relationship.png)
+  ![dm-1-assign-relationship](images/dm-1-assign-relationship.png)
 
 Repeat the process linking the `out-products.csv` file with `out-keywords.csv`. The end result should result in the following:
 
-  ![dm-relationships-after](images/dm-relationships-after.png)
+  ![dm-1-relationships-after](images/dm-1-relationships-after.png)
 
 Click the `Save` icon in the top menu to save off the `Data module`.
 
@@ -235,9 +235,16 @@ Click `Select a source` to bring up the selction dialog. Select the `Data module
 
   ![db-1-select-source](images/db-1-select-source.png)
 
-Now you should see a blank canvas to create your dashboard. The data files and field names will be displayed in the left-side resource list.
+Now you should see a blank canvas to create your dashboard.
 
   ![db-1-blank](images/db-1-blank.png)
+
+From the image above:
+
+* [1] The data module currently associated with the dashboard.
+* [2] The resources included in the data module.
+* [3] The dashboard canvas.
+* [4] The tabs defined for the dashboard.
 
 To create your dashboard, you will need to become knowledgeable with the numerous tools available from icons and pop-up menus.
 
@@ -259,7 +266,7 @@ The types of visualizations available include the following:
 
   ![db-1-widget-set](images/db-1-widget-set.png)
 
-## 8. Add visualizations to the Dashboard
+## 8. Add visualizations to the dashboard
 
 ### Product list box
 
@@ -433,6 +440,12 @@ Congratulations! You have completed your first Cognos Analytics dashboard. The l
   ![db-1-final-layout](images/db-1-final-layout.png)
 
 Click the `Save` icon in the top menu to save your dashboard.
+
+#### Dashboard navigation
+
+Now that all of your visualizations are defined and linked correctly, you can manipulate the dashboard using your mouse. If you click on a product name, all of the visualizations will change to focus on that product. The same is true if you click on a store name.
+
+The purpose for the `Product list box` was to provide a convenient focal point for selecting a product, but this can also be achieved by selecting the product name from any of the other visualizations.
 
 ## 9. Update Data Module
 
