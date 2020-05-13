@@ -17,8 +17,8 @@ In this section, we will walk you through the process of creating sales, store a
 1. [Run the script to load data to the database](#3-run-the-script-to-load-data-to-the-database)
 1. [Create database connection in Cognos Analytics](#4-create-database-connection-in-cognos-analytics)
 1. [Load metadata from the connected Database](#5-load-metadata-from-the-connected-database)
-1. [Create data module](#6-create-data-module)
-1. [Create dashboard](#7-create-dashboard)
+1. [Create a data module](#6-create-a-data-module)
+1. [Create a dashboard](#7-create-a-dashboard)
 1. [Run Cognos Analytics to visualize data](#6-run-cognos-analytics-to-visualize-data)
 
 >If you have come here without completing the first tutorial please click [here](doc/source/discovery-data.md) to begin.
