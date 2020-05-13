@@ -215,6 +215,10 @@ Congratulations! You have now completed the creation of inventory dashboard. The
 
 Click the `Save` icon in the top menu to save your dashboard.
 
+#### Dashboard navigation
+
+Just like the dashboard we created in the first section, now that all of your visualizations are defined and linked correctly, you can manipulate the dashboard using your mouse. If you click on a product or store name in any of the visualization objects, the entire dashboard will change to reflect that specific product or store.
+
 ### Whats Next?
 <table border="0">
   <tbody>
