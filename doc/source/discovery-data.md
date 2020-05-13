@@ -486,7 +486,7 @@ In the next section of this code pattern, we will add more business-related data
 <table border="0">
   <tbody>
     <tr>
-      <td align="left"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/README.md"><img src="images/return-to-main-readme.png"/></a><br/>
+      <td align="left"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data"><img src="images/return-to-main-readme.png"/></a><br/>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -506,7 +506,7 @@ In the next section of this code pattern, we will add more business-related data
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;</span>
       </td>
-      <td align="right"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/doc/source/business-data.md"><img src="images/proceed-to-next-section.png"/></a><br/>
+      <td align="right"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/master/doc/source/business-data.md"><img src="images/proceed-to-next-section.png"/></a><br/>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
