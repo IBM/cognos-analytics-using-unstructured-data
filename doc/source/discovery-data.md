@@ -443,9 +443,9 @@ Click the `Save` icon in the top menu to save your dashboard.
 
 #### Dashboard navigation
 
-Now that all of your visualization are defined and linked correctly, you can manipulate the dashboard using your mouse. If you click on a product name, all of the visualization will change to focus on that product. The same is true if you click on a store name.
+Now that all of your visualizations are defined and linked correctly, you can manipulate the dashboard using your mouse. If you click on a product name, all of the visualizations will change to focus on that product. The same is true if you click on a store name.
 
-The purpose for the `Product list box` was to provide a focal point for selecting a product, but this can also be achieved by selecting the product name from any of the other visualizations.
+The purpose for the `Product list box` was to provide a convenient focal point for selecting a product, but this can also be achieved by selecting the product name from any of the other visualizations.
 
 ## 9. Update Data Module
 
