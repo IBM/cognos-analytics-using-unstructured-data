@@ -46,7 +46,7 @@ We will cover how to incorporate data from multiple sources, as well as how to c
 
 To better organize the content, this code pattern is divided into the following sections:
 
-### 1. Visualize unstructured data from Watson Discovery in the Cognos Analytics Dashboard
+### Section 1. Visualize unstructured data from Watson Discovery in the Cognos Analytics Dashboard
 
 ![db-1-final-dashboard](doc/source/images/db-1-final-dashboard.png)
 
@@ -57,9 +57,24 @@ In this section, we walk through the steps to:
 * Query Watson Discovery to capture keywords and sentiment
 * Upload data into Cognos Analytics to create data modules and dashboard visualizations
 
-Click [here](doc/source/discovery-data.md) to begin.
+<table border="0">
+  <tbody>
+    <tr>
+      <td align="left"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/doc/source/discovery-data.md"><img src="doc/source/images/proceed-to-section-1.png"/></a><br/>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-### 2. Visualize customer insights with business data for product performance analysis
+### Section 2. Visualize customer insights with business data for product performance analysis
 
 ![db-2-final-dashboar](doc/source/images/db-2-final-dashboard.png)
 
@@ -70,7 +85,23 @@ In this section, we build on the first section by adding:
 * Connect the Db2 Warehouse to Cognos Analytics
 * Create additional Cognos Analytics dashboards to visualize business data
 
-Click [here](doc/source/business-data.md) to begin.
+<table border="0">
+  <tbody>
+    <tr>
+      <td align="left"><a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/rearrange/doc/source/business-data.md"><img src="doc/source/images/proceed-to-section-2.png"/></a><br/>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>&nbsp;&nbsp;</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
 # License
 
