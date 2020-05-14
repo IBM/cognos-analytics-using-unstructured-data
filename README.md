@@ -66,7 +66,7 @@ In this section, we walk through the steps to:
 
 ### Section 2. Visualize customer insights with business data for product performance analysis
 
-![db-2-final-dashboar](doc/source/images/db-2-final-dashboard.png)
+![db-2-final-dashboard](doc/source/images/db-2-final-dashboard.png)
 
 In this section, we build on the first section by adding:
 
@@ -76,6 +76,18 @@ In this section, we build on the first section by adding:
 * Create additional Cognos Analytics dashboards to visualize business data
 
 <a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/master/doc/source/business-data.md"><img src="doc/source/images/proceed-to-section-2.png"/>
+
+### Section 3. Visualize Sales based on Product Reviews Sentiments
+
+![Sales by Sentiments](doc/source/images/sales-by-sentiments.png)
+
+In this section, we will analyze how product reviews sentiments impact sales of a product. To do that we will:
+
+* Use product sales and review data
+* Use a intermediary date table to create a relationship between sales and review based on their dates
+* Create additional Cognos Analytics dashboards to visualize and analyze business data
+
+<a href="https://github.com/IBM/cognos-analytics-using-unstructured-data/blob/master/doc/source/sales-by-sentiments.md"><img src="doc/source/images/proceed-to-section-3.png"/>
 
 
 # License
