@@ -40,9 +40,14 @@ Here is an example of the types of visualzations we will be creating in this cod
 
 ## Instructions
 
+> **Important**: Before proceeding, ensure that you have access to the latest release of Cognos Analytics. Click [here](https://www.ibm.com/account/reg/ca-en/signup?formid=urx-34710) to register for a free trial version.
+
 The theme of this code pattern is built around data for a small coffee manufacturer that sells their products in local markets. The data will consist of reviews and ratings for their different coffee flavors, as well as associated sales and inventory data.
 
 We will cover how to incorporate data from multiple sources, as well as how to create the visualizations in Cognos Analytics to best represent the data.
+
+
+
 
 To better organize the content, this code pattern is divided into the following sections:
 

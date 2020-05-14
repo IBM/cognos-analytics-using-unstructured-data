@@ -13,7 +13,7 @@ In this section, we will walk you through the process of loading unstructured da
 ## Steps
 
 1. [Clone the repo](#1-clone-the-repo)
-1. [Create your services on IBM Cloud Pak for Data](#2-create-your-services-on-ibm-cloud-pak-for-data)
+1. [Create your Watson Discovery service](#2-create-your-watson-discovery-service)
 1. [Configure Watson Discovery](#3-configure-watson-discovery)
 1. [Add service credentials to environment file](#4-add-service-credentials-to-environment-file)
 1. [Run scripts to generate data](#5-run-scripts-to-generate-data)
@@ -28,66 +28,67 @@ In this section, we will walk you through the process of loading unstructured da
 git clone https://github.com/IBM/cognos-analytics-using-unstructured-data
 ```
 
-## 2. Create your services on IBM Cloud Pak for Data
+## 2. Create your Watson Discovery service
 
-Create the following services:
+To create your Watson Discovery service:
 
-* **Watson Discovery**
-* **Cognos Analytics** - click [here](https://www.ibm.com/account/reg/ca-en/signup?formid=urx-34710) to register for a free trial version
+* From your IBM Cloud dashboard, click on `Create resource`.
 
-Use the following instructions for each of the services.
+* Search the catalog for `discovery`.
 
-### Install and provision service instances
+* Click the `Discovery` tile to launch the create panel.
 
-The services are not available by default. An administrator must install them on the IBM Cloud Pak for Data platform, and you must be given access to the service. To determine whether the service is installed, Click the <b>Services</b> icon (<img class="lazycontent" src="images/services_icon.png" alt="services_icon"/>) and check whether the service is enabled.
+  ![disco-create-service](images/disco-create-service.png)
+
+  From the panel, enter a unique name, a region and resource group, and a plan type (select the default `lite` plan). Click `Create` to create and enable your service.
 
 ## 3. Configure Watson Discovery
 
 ### Launch Discovery
 
-Find the Discovery service in your list of `Provisioned Instances` in your IBM Cloud Pak for Data Dashboard.
+From the IBM Cloud dashboard, click on your new Discovery service in the resource list.
 
-Click on `View Details` from the options menu associated with your Discovery service.
+  ![disco-launch-service](images/disco-launch-service.png)
 
-  ![disco-view-details](images/disco-view-details.png)
+From the `Manage` tab panel of your Discovery service, click the `Launch Watson Discovery` button.
 
-Click on `Open Watson Discovery`.
+### Create a collection
 
-  ![disco-open](images/disco-open.png)
+Create a new data collection by selecting the `Update your own data` option. Then provide the data collection a unique name.
 
-### Create a project and collection
+  ![disco-create-collection](images/disco-create-collection.png)
 
-Create a new project by clicking the `New Project` tile.
+### Configure the collection
 
-Give the project a unique name and select the `Document Retrieval` option, then click `Next`.
+Click `Configure Data` located in the top-right portion of the panel.
 
-For data source, click on the `Upload data` tile and click `Next`.
+  ![disco-config-icon](images/disco-config-icon.png)
 
-Enter a unique name for your collection and click `Finish`.
+This will bring up the `Enrich fields` tab. Listed will be all of the default enrichments for your collection. We want to add `Keywords` to this list.
 
-> **NOTE**: on IBM Cloud Pak for Data, Discovery service queries are defaulted to be performed on all collections within a project. For this reason, it is advised that you create a new project to contain the collection we will be creating for this code pattern.
+Click the `Add enrichments` button.
+
+  ![disco-enrich-fields](images/disco-enrich-fields.png)
+
+In the `Keyword Extraction` panel, click `Add`. Then close the dialog.
+
+  ![disco-add-keyword-enrichment](images/disco-add-keyword-enrichment.png)
+
+The new list of collection enrichments should now include `Keywords`.
+
+  ![disco-apply-to-collection](images/disco-apply-to-collection.png)
+
+Click `Apply changes to collection` to bring up the `Upload documents` dialog.
+
+  ![disco-upload-files](images/disco-upload-files.png)
 
 ### Load the product review files
 
-On the `Configure Collection` panel, click the `Select documents` button to select all 1000 json review files located in the `data` directory of your local repo.
+From the `Upload documents` dialog, click `select documents` to bring up the selection list. From there, select all 998 json review files located in the `data/coffee_reviews` directory of your local repo.
 
 Be patient as this process make take several minutes.
 
-### Access the collection
-
-To access the collection, make sure you are in the correct project, then click the `Manage Collections` tab in the left-side of the panel.
-
-  ![disco-project-collections-cpd](images/disco-project-collections.png)
-
-Click the collection tile to access it.
-
-  ![disco-collection](images/disco-collection.png)
-
-By default, `sentiments` are not turned on. To turn them on, click on the `Enrichments` tab, click the checkbox for `Sentiment of Document`, and then select `text` as the field to enrich.
-
-  ![disco-sentiment](images/disco-sentiment.png)
-
-Click `Apply changes and reprocess` to reprocess all of the reviews. This make take several minutes.
+  ![disco-loaded-collection](images/disco-loaded-collection.png)
 
 ## 4. Add service credentials to environment file
 
@@ -99,27 +100,13 @@ Next, you'll need to add the Watson Discovery credentials to the .env file.
   cp env.sample .env
   ```
 
-* Collect IBM Cloud Pak for Data credentials
+* From your Discovery service collection page, locate the credentials for your collection by clicking the dropdown button located at the top right. Copy the Collection ID and Environment ID values.
 
-  * Create a user to use for authentication. From the IBM Cloud Pak for Data main navigation menu (☰), select `Administer > Manage users` and then `+ New user`.
+  ![disco-get-env-ids](images/disco-get-env-ids.png)
 
-  * From the main navigation menu (☰), select `My instances`.
+* Locate the service credentials listed on the home page of your Discovery service and copy the API Key and URL values.
 
-  * On the `Provisioned instances` tab, find your service instance, and then hover over the last column to find and click the ellipses icon. Choose `View details`.
-
-  * Copy the `URL` to use as the `{SERVICE_NAME}_URL` when you configure credentials.
-
-  * Use the `Menu` and select `Users` and `+ Add user` to grant your user access to this service instance. This is the user name (and password) you will enter into your `.env` file.
-
-* Collect Watson Discovery project ID
-
-  * From your Watson Discovery service instance, click on your project.
-
-  * From the main navigation menu (☰), select `Integrate and deploy`, and then click on the `View API Information` tab.
-
-    ![disco-project-id](images/disco-project-id.png)
-
-  * Copy the `Project ID` to enter into your `.env` file.
+  ![disco-get-creds](images/disco-get-creds.png)
 
 * Edit the `.env` file with the necessary credentials and settings
 
@@ -130,16 +117,10 @@ Next, you'll need to add the Watson Discovery credentials to the .env file.
   # your own before starting the app.
 
   # Watson Discovery
-  DISCOVERY_AUTH_TYPE=cp4d
-  DISCOVERY_AUTH_URL=https://my-cpd-cluster.ibmcodetest.us
-  DISCOVERY_USERNAME=my-username
-  DISCOVERY_PASSWORD=my-password
-  DISCOVERY_URL=https://my-cpd-cluster.ibmcodetest.us/assistant/assistant/instances/1576274722862/api
-  # # If you use a self-signed certificate, you need to disable SSL verification.
-  # # This is not secure and not recommended.
-  #DISCOVERY_AUTH_DISABLE_SSL=true
-  #DISCOVERY_DISABLE_SSL=true
-  DISCOVERY_PROJECT_ID=<add_project_id>
+  DISCOVERY_URL=<add_discovery_url>
+  DISCOVERY_ENVIRONMENT_ID=<add_discovery_environment_id>
+  DISCOVERY_COLLECTION_ID=<add_discovery_collection_id>
+  DISCOVERY_APIKEY=<add_discovery_apikey>
   ```
 
 ## 5. Run scripts to generate data
@@ -177,7 +158,7 @@ Outside of the scripts used to build the product and data listed above, there ar
 1. Cut and paste the product ID of the products associated with these reviews.
 1. Add a more user-readable product ID for each.
 1. Process all reviews in `data/Reviews-full.csv`, and only process the top 200 useful reviews for the products we have identified.
-1. Create a json file for each review and store it in the `data/food_reviews` directory.
+1. Create a json file for each review and store it in the `data/coffee_reviews` directory.
 
 > **Note**: The actual review dates were spread out from 2008-20017. In order to make the data more relevant to our needs, we modified all dates to be in 2019.
 
