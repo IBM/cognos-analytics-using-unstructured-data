@@ -275,7 +275,11 @@ P1000-05,product,23
 P1000-05,k-cup,11
 P1000-05,Amazon,17
 P1000-05,Keurig,21
+P1000-05,cups,35
+P1000-05,brewer,9
 P1000-05,issue,17
+P1000-05,issues,12
+P1000-05,kcups,6
 P1000-05,work,7
 P1000-05,time,12
 P1000-05,Keurig machine,7
@@ -284,8 +288,6 @@ P1000-05,flavor,17
 P1000-05,review,12
 P1000-05,problems,17
 P1000-05,reviewers,6
-P1000-05,cups,35
-P1000-05,brewer,9
 P1000-05,filter,6
 P1000-05,K-cup,6
 P1000-05,money,11
@@ -294,8 +296,6 @@ P1000-05,things,6
 P1000-05,water,12
 P1000-05,Cyclone,13
 P1000-05,Brooklyn Bean,9
-P1000-05,kcups,6
-P1000-05,issues,12
 P1000-05,foil,6
 P1000-05,Brooklyn Bridge Blend,8
 P1000-05,price,18
@@ -590,7 +590,11 @@ P1000-01,product,23
 P1000-01,k-cup,11
 P1000-01,Amazon,17
 P1000-01,Keurig,21
+P1000-01,cups,35
+P1000-01,brewer,9
 P1000-01,issue,17
+P1000-01,issues,12
+P1000-01,kcups,6
 P1000-01,work,7
 P1000-01,time,12
 P1000-01,Keurig machine,7
@@ -599,8 +603,6 @@ P1000-01,flavor,17
 P1000-01,review,12
 P1000-01,problems,17
 P1000-01,reviewers,6
-P1000-01,cups,35
-P1000-01,brewer,9
 P1000-01,filter,6
 P1000-01,K-cup,6
 P1000-01,money,11
@@ -609,8 +611,6 @@ P1000-01,things,6
 P1000-01,water,12
 P1000-01,Cyclone,13
 P1000-01,Brooklyn Bean,9
-P1000-01,kcups,6
-P1000-01,issues,12
 P1000-01,foil,6
 P1000-01,Brooklyn Bridge Blend,8
 P1000-01,price,18
@@ -905,7 +905,11 @@ P1000-04,product,23
 P1000-04,k-cup,11
 P1000-04,Amazon,17
 P1000-04,Keurig,21
+P1000-04,cups,35
+P1000-04,brewer,9
 P1000-04,issue,17
+P1000-04,issues,12
+P1000-04,kcups,6
 P1000-04,work,7
 P1000-04,time,12
 P1000-04,Keurig machine,7
@@ -914,8 +918,6 @@ P1000-04,flavor,17
 P1000-04,review,12
 P1000-04,problems,17
 P1000-04,reviewers,6
-P1000-04,cups,35
-P1000-04,brewer,9
 P1000-04,filter,6
 P1000-04,K-cup,6
 P1000-04,money,11
@@ -924,8 +926,6 @@ P1000-04,things,6
 P1000-04,water,12
 P1000-04,Cyclone,13
 P1000-04,Brooklyn Bean,9
-P1000-04,kcups,6
-P1000-04,issues,12
 P1000-04,foil,6
 P1000-04,Brooklyn Bridge Blend,8
 P1000-04,price,18
@@ -1220,7 +1220,11 @@ P1000-02,product,23
 P1000-02,k-cup,11
 P1000-02,Amazon,17
 P1000-02,Keurig,21
+P1000-02,cups,35
+P1000-02,brewer,9
 P1000-02,issue,17
+P1000-02,issues,12
+P1000-02,kcups,6
 P1000-02,work,7
 P1000-02,time,12
 P1000-02,Keurig machine,7
@@ -1229,8 +1233,6 @@ P1000-02,flavor,17
 P1000-02,review,12
 P1000-02,problems,17
 P1000-02,reviewers,6
-P1000-02,cups,35
-P1000-02,brewer,9
 P1000-02,filter,6
 P1000-02,K-cup,6
 P1000-02,money,11
@@ -1239,8 +1241,6 @@ P1000-02,things,6
 P1000-02,water,12
 P1000-02,Cyclone,13
 P1000-02,Brooklyn Bean,9
-P1000-02,kcups,6
-P1000-02,issues,12
 P1000-02,foil,6
 P1000-02,Brooklyn Bridge Blend,8
 P1000-02,price,18
@@ -1535,7 +1535,11 @@ P1000-03,product,23
 P1000-03,k-cup,11
 P1000-03,Amazon,17
 P1000-03,Keurig,21
+P1000-03,cups,35
+P1000-03,brewer,9
 P1000-03,issue,17
+P1000-03,issues,12
+P1000-03,kcups,6
 P1000-03,work,7
 P1000-03,time,12
 P1000-03,Keurig machine,7
@@ -1544,8 +1548,6 @@ P1000-03,flavor,17
 P1000-03,review,12
 P1000-03,problems,17
 P1000-03,reviewers,6
-P1000-03,cups,35
-P1000-03,brewer,9
 P1000-03,filter,6
 P1000-03,K-cup,6
 P1000-03,money,11
@@ -1554,8 +1556,6 @@ P1000-03,things,6
 P1000-03,water,12
 P1000-03,Cyclone,13
 P1000-03,Brooklyn Bean,9
-P1000-03,kcups,6
-P1000-03,issues,12
 P1000-03,foil,6
 P1000-03,Brooklyn Bridge Blend,8
 P1000-03,price,18
