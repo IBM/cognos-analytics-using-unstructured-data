@@ -8,7 +8,7 @@
     "url": "https://github.com/IBM/cognos-analytics-using-unstructured-data"
   },
   "scripts": {
-    "start": "node lib/generate-disco-data.js",
+    "start": "node lib/generate-product-data.js",
     "bootstrap": "cp env.sample .env",
     "lint": "eslint lib/.",
     "lint:fix": "eslint lib/. --fix"
@@ -16,8 +16,7 @@
   "dependencies": {
     "csv-writer": "^1.6.0",
     "dotenv": "^8.2.0",
-    "ibm-watson": "^5.4.0",
-    "ibm_db": "^2.6.4"
+    "ibm-watson": "^5.4.0"
   },
   "engines": {
     "node": "12.0.0"
