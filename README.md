@@ -483,39 +483,64 @@ You will then need to confirm which data module you want to replace. Select the 
 
 ## 10. Visualize the impact product reviews have on sales
 
-Now that we have covered how to create and update data modules, and how to create dashboard visualizations, we will build one more visualization that brings together product sentiment and product sales, to analyze how they are related.
+Now that we have covered how to 1) create and update data modules, and 2) how to create dashboard visualizations, we will build one more visualization that brings together product sentiment and product sales, to analyze how they are related.
 
-### Update data module with sales data
+### Update data module with new files
 
-Using what we learned in the previous section, add `data/sales.csv` to your data module. Make sure you `relink` the data module to your dashboard.
+To complete this task, we will need additional files.
 
-### Create relationships between Product Reviews, Sales and Date
+* data/out-sales.csv - containts product sales for the previous 6 months.
+* data/d_Dates.csv - a generic date lookup table that converts every day in 2019 into various time/date formats.
 
-In the data module view, go to the relatioship tab and create one to many relationship between the `out-reviews.csv` and `out-sale.csv` table.
+Using what we learned in the previous section, perform the following tasks to load both of these files from you local repo into your data module:
 
->Note: The Data table is a date lookup table that contains each day, month and year of a date.
+  1. Use `Uplodad files` option in Cognos Analytics to upload both files.
+  1. From your data module panel, click the `+` icon to `Add new sources`.
+  1. Select both files to load them into your data module.
+  1. Go to the `Relationships` tab in the data module panel. Both files should now be displayed.
+  1. Right-click on `d_Dates.csv` and then select `Relationship...`.
+  1. In the relationship panel, connect `d_Dates.csv -> Date` with `out-reviews.csv -> Time`.
+  1. Repeat previous step, but this time connect `d_Dates.csv -> Date` with `out-sales.csv -> Date`.
+  1. Right-click on `out-reviews.csv` and then select `Relationship...`.
+  1. In the relationship panel, connect `out-reviews -> ProductId` with `out-sales.csv -> ProductId`.
 
-![relationships](doc/source/images/create-sales-reviews-date-relation.gif)
+  Once complete, your panel should look similar to this:
 
-### Create a review date/time calculation
+  ![dm-1-date-relationships](doc/source/images/dm-1-date-relationships.png)
 
-In the `Product Reviews` table create a calculation based on `time` column using a `_month` function which generates month based on the date provided.
+  >**Note:** Note the `1` to `N` relationships shown in the above image. Make sure your panel matches this.
 
-![calculation](doc/source/images/time-calc.gif)
+After saving your data module, bring up your dashboard panel where we will be creating our new visualization.
 
 ### Create a line and column visualization
 
-From the `Product Reviews` table select the calculation you created in step 2, `Sentiment Score`, and from `Sales` table select select `Amount` and drag them to teh canvas. It will generate a `line and column` graph. The line represents the sentiment score and the bar represents the sales.
+Bring up your existing dashboard.
 
-Make sure to rename the X and Y axis labels to appropriate names, and also provide a title to the graph as shown below.
+>**Note:** Remember to `relink` the data module from your dashboard resource list.
 
-![line and column graph](doc/source/images/sales-by-sentiments.gif)
+Create a new tab for your dashboard. This will give us enough room to create a couple new visualizations.
+
+Select `out-reviews.csv -> Sentiment Score`, `out-reviews.csv -> time_to_month` and `out-sales.csv -> Quantity` from the resource list and drag them onto the canvas. The defaullt visualization should be a `line and column` graph. The line represents the average sentiment score per month, and the bar represents the total sales per month.
+
+Using the `Properties` fields, change the `Item axis title` to `Month`, adn the `Value axis title` to `Sales`.
+
+![db-1-sales-sentiment](doc/source/images/db-1-sales-sentiment.png)
 
 ### Create a list view to select products
 
-Lets create a list view with all the products so that the the `sales by sentiment` visualization gives you product specific results. By default the overall chart is the view of all product sales and their sentiments.
+Lets create a list view with all the products so that the `sales-sentiment` visualization gives you product specific results. By default, the chart shows sales and sentiment for all the products.
 
-![calculation](doc/source/images/product-list.gif)
+Since we already created a product list visualization on our first dashboard tab, the easiest way to proceed is to copy and paste it into our new dashboard tab.
+
+Click the tab button at the top of the panel to return to the first tab. Select the product list object, can click on the `Duplicate` icon.
+
+![db-1-duplicate](doc/source/images/db-1-duplicate.png)
+
+A duplicate copy of the visualization will be displayed. Select it, then use the move icon to drag it onto the tab for the new dashboard. Click the tab for the second dashboard to see the new visualization. Select a product in the list to see how the `sales-sentiment` graph changes to reflect the selected product.
+
+![db-1-second-tab](doc/source/images/db-1-second-tab.png)
+
+As you can see, there is a direct coorelation between product sentiment and product sales.
 
 # License
 
