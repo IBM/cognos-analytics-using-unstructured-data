@@ -44,6 +44,7 @@ The theme of this code pattern is built around data for a small coffee manufactu
 1. [Add visualizations to the dashboard](#8-add-visualizations-to-the-dashboard)
 1. [Update Data Module](#9-update-data-module)
 1. [Visualize the impact product reviews have on sales](#10-visualize-the-impact-product-reviews-have-on-sales)
+1. [Next steps](#11-next-steps)
 
 ## 1. Clone the repo
 
@@ -501,14 +502,14 @@ Using what we learned in the previous section, perform the following tasks to lo
   1. Right-click on `d_Dates.csv` and then select `Relationship...`.
   1. In the relationship panel, connect `d_Dates.csv -> Date` with `out-reviews.csv -> Time`.
   1. Repeat previous step, but this time connect `d_Dates.csv -> Date` with `out-sales.csv -> Date`.
-  1. Right-click on `out-reviews.csv` and then select `Relationship...`.
-  1. In the relationship panel, connect `out-reviews -> ProductId` with `out-sales.csv -> ProductId`.
+  1. Right-click on `out-sales.csv` and then select `Relationship...`.
+  1. In the relationship panel, connect `out-sales -> ProductId` with `out-products.csv -> ProductId`.
 
   Once complete, your panel should look similar to this:
 
   ![dm-1-date-relationships](doc/source/images/dm-1-date-relationships.png)
 
-  >**Note:** Note the `1` to `N` relationships shown in the above image. Make sure your panel matches this.
+  >**Note:** Note the `1 to N` relationships shown in the above image. Make sure your panel matches this.
 
 After saving your data module, bring up your dashboard panel where we will be creating our new visualization.
 
@@ -520,15 +521,17 @@ Bring up your existing dashboard.
 
 Create a new tab for your dashboard. This will give us enough room to create a couple new visualizations.
 
-Select `out-reviews.csv -> Sentiment Score`, `out-reviews.csv -> time_to_month` and `out-sales.csv -> Quantity` from the resource list and drag them onto the canvas. The defaullt visualization should be a `line and column` graph. The line represents the average sentiment score per month, and the bar represents the total sales per month.
+Select `out-reviews.csv -> Sentiment Score`, `d_dates.csv -> Month_ID` and `out-sales.csv -> Quantity` from the resource list and drag them onto the canvas. The defaullt visualization should be a `line and column` graph. The line represents the average sentiment score per month, and the bar represents the total sales per month.
 
 Using the `Properties` fields, change the `Item axis title` to `Month`, adn the `Value axis title` to `Sales`.
 
 ![db-1-sales-sentiment](doc/source/images/db-1-sales-sentiment.png)
 
+Note that this graph is showing total product sales and average sentiment scores on a monthly basis. This doesn't really provide enough granularity to see how sales of specific products are related to product specific customer reviews. In order to achieve this, we need to be able to filter this graph on a product level.
+
 ### Create a list view to select products
 
-Lets create a list view with all the products so that the `sales-sentiment` visualization gives you product specific results. By default, the chart shows sales and sentiment for all the products.
+Lets create a list view with all the products so that the `sales-sentiment` visualization gives you product specific results. By default, the chart shows sales and sentiment for all the products, which is not very useful.
 
 Since we already created a product list visualization on our first dashboard tab, the easiest way to proceed is to copy and paste it into our new dashboard tab.
 
@@ -541,6 +544,17 @@ A duplicate copy of the visualization will be displayed. Select it, then use the
 ![db-1-second-tab](doc/source/images/db-1-second-tab.png)
 
 As you can see, there is a direct coorelation between product sentiment and product sales.
+
+## 11. Next steps
+
+Congratulations on completing the first code pattern in the Cognos Analytics series. In the next code pattern, we will cover:
+
+* Adding sales, store and inventory data to support our coffee company product data.
+* Uploading all product and business data into Db2 Warehouse tables.
+* Connecting Db2 Warehouse to Cognos Analytics.
+* Creating additional Cognos Analytics dashboards to visualize business data.
+
+Click [here](https://github.com/IBM/cognos-analytics-to-visualize-business-data) to proceed to the "Visualize customer insights with business data for product performance analysis" code pattern.
 
 # License
 
