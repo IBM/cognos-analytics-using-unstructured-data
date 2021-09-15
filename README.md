@@ -24,7 +24,7 @@ The theme of this code pattern is built around data for a small coffee manufactu
 ## Included components
 
 * [Cognos Analytics](https://www.ibm.com/products/cognos-analytics): A business intelligence solution that empowers users with AI-infused self-service capabilities that accelerate data preparation, analysis, and report creation.
-* [Watson Discovery](https://www.ibm.com/watson/services/discovery/): A cognitive search and content analytics engine for applications to identify patterns, trends, and actionable insights.
+* [Watson Discovery](https://www.ibm.com/cloud/watson-discovery): A cognitive search and content analytics engine for applications to identify patterns, trends, and actionable insights.
 
 **Important**: Before proceeding, ensure that you have access to the latest release of Cognos Analytics. Click [here](https://www.ibm.com/products/cognos-analytics) to get product and pricing information, as well as access to a free trial version.
 
@@ -64,7 +64,9 @@ To create your Watson Discovery service:
 
   ![disco-create-service](doc/source/images/disco-create-service.png)
 
-  From the panel, enter a unique name, a region and resource group, and a plan type (select the default `lite` plan). Click `Create` to create and enable your service.
+  From the panel, enter a unique name, a region and resource group, and a plan type (select the default `Plus` plan). Click `Create` to create and enable your service.
+
+  >**NOTE**: The first instance of Plus plan for IBM Watson Discovery comes with a free 30-day trial; it is chargeable once the trial is over. If you no longer require your Plus instance for Watson Discovery after going through this exercise, feel free to delete it.
 
 ## 3. Configure Watson Discovery
 
@@ -76,43 +78,61 @@ From the IBM Cloud dashboard, click on your new Discovery service in the resourc
 
 From the `Manage` tab panel of your Discovery service, click the `Launch Watson Discovery` button.
 
+### Create a project
+
+The landing page for Watson Discovery is a panel showing your current projects.
+
+  ![disco-landing-page](doc/source/images/disco-landing-page.png)
+
+Click `New project`.
+
+  ![disco-create-project](doc/source/images/disco-create-project.png)
+
+Click the `Document Retrieval` type project, and then enter a unique project name.
+
+Click `Next` to select the data source.
+
+  ![disco-project-data-source](doc/source/images/disco-project-data-source.png)
+
+Select the `Upload data` option, and click `Next` to create and configure the collection.
+
 ### Create a collection
 
-Create a new data collection by selecting the `Update your own data` option. Then provide the data collection a unique name.
+Next you will see the `Configure collection` tab panel.
 
-  ![disco-create-collection](doc/source/images/disco-create-collection.png)
+  ![disco-config-collection](doc/source/images/disco-config-collection.png)
 
-### Configure the collection
-
-Click `Configure Data` located in the top-right portion of the panel.
-
-  ![disco-config-icon](doc/source/images/disco-config-icon.png)
-
-This will bring up the `Enrich fields` tab. Listed will be all of the default enrichments for your collection. We want to add `Keywords` to this list.
-
-Click the `Add enrichments` button.
-
-  ![disco-enrich-fields](doc/source/images/disco-enrich-fields.png)
-
-In the `Keyword Extraction` panel, click `Add`. Then close the dialog.
-
-  ![disco-add-keyword-enrichment](doc/source/images/disco-add-keyword-enrichment.png)
-
-The new list of collection enrichments should now include `Keywords`.
-
-  ![disco-apply-to-collection](doc/source/images/disco-apply-to-collection.png)
-
-Click `Apply changes to collection` to bring up the `Upload documents` dialog.
-
-  ![disco-upload-files](doc/source/images/disco-upload-files.png)
+Give the collection a unique name and click `Next`.
 
 ### Load the product review files
 
-From the `Upload documents` dialog, click `select documents` to bring up the selection list. From there, select all 998 json review files located in the `data/coffee_reviews` directory of your local repo.
+From the `Upload your data` panel, click `Drag and drop files here or upload` to bring up the selection list. From there, select all 998 json review files located in the `data/coffee_reviews` directory of your local repo.
 
-Be patient as this process make take several minutes.
+  ![disco-upload-files](doc/source/images/disco-upload-files.png)
 
-  ![disco-loaded-collection](doc/source/images/disco-loaded-collection.png)
+Once all files start loading, click `Finish`.
+
+>**NOTE**: You will see alerts displayed when the file loading is complete.
+
+### Add keyword and sentiment enrichment
+
+Once the files have started uploading, the `Improve and customize` panel will be displayed. Note that you can always navigate to this panel by clicking the top icon in the tool bar in the left margin.
+
+  ![disco-extract-keywords](doc/source/images/disco-extract-keywords.png)
+
+In order to capture `keywords` from our data, click on `Keywords` from the `Extract meaning` drop-down menu.
+
+  ![disco-config-keywords](doc/source/images/disco-config-keywords.png)
+
+From the `Enrichments` tab panel, select `text` as the field to enrich for all `Keywords`.
+
+Do the same for the `Sentiment of Document` enrichment.
+
+Once you have selected `text` as the field to enrich for both `Keywords` and `Sentiment of Documents`, click `Apply changes and reprocess` to apply the changes and reprocess the downloaded files.
+
+Then click on the `Activity` panel to view the progress of the downloaded files in the collection.
+
+  ![disco-project-activity](doc/source/images/disco-project-activity.png)
 
 ## 4. Add service credentials to environment file
 
@@ -124,9 +144,9 @@ Next, you'll need to add the Watson Discovery credentials to the .env file.
   cp env.sample .env
   ```
 
-* From your Discovery service collection page, locate the credentials for your collection by clicking the dropdown button located at the top right. Copy the Collection ID and Environment ID values.
+* From your Discovery panel, click the `Integrate and deploy` icon in the left-side menu, then click on the `API Information` tab. Copy the Project ID value.
 
-  ![disco-get-env-ids](doc/source/images/disco-get-env-ids.png)
+  ![disco-project-id](doc/source/images/disco-project-id.png)
 
 * Locate the service credentials listed on the home page of your Discovery service and copy the API Key and URL values.
 
@@ -141,21 +161,20 @@ Next, you'll need to add the Watson Discovery credentials to the .env file.
   # your own before starting the app.
 
   # Watson Discovery
-  DISCOVERY_URL=<add_discovery_url>
-  DISCOVERY_ENVIRONMENT_ID=<add_discovery_environment_id>
-  DISCOVERY_COLLECTION_ID=<add_discovery_collection_id>
+  DISCOVERY_PROJECT_ID=<add_discovery_project_id>
   DISCOVERY_APIKEY=<add_discovery_apikey>
+  DISCOVERY_URL=<add_discovery_url>
   ```
 
 ## 5. Run scripts to generate data
 
-The provided scripts can be used to generate sample data for a facticious company, Named "Acme Coffee". The company offers 5 types of coffee, which is sold in grocery stores.
+The provided scripts can be used to generate sample data for a factitious company, Named "Acme Coffee". The company offers 5 types of coffee, which is sold in grocery stores.
 
-The scripts build the following data, which will be output to local .csv files:
+The scripts build the following data, which will be output to local CSV files:
 
-* Reviews - this contains all of the reviews for each of the products. Includes rating and sentiment score.
-* Products - this is information about each of our products. Includes product_id, name, and unit price.
-* Keywords - this contains keywords generated from product reviews.
+* Reviews [`data/out-reviews.csv`] - this contains all of the reviews for each of the products. Includes rating and sentiment score.
+* Products [`data/out-products.csv`] - this is information about each of our products. Includes product_id, name, and unit price.
+* Keywords [`data/out-keywords.csv`] - this contains keywords generated from product reviews.
 
 To run the script you will need to install [Node.js](https://nodejs.org/), an open-source JavaScript run-time environment for executing server-side JavaScript code.
 
