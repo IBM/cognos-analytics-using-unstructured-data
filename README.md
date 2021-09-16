@@ -172,9 +172,9 @@ The provided scripts can be used to generate sample data for a factitious compan
 
 The scripts build the following data, which will be output to local CSV files:
 
-* Reviews [`data/out-reviews.csv`] - this contains all of the reviews for each of the products. Includes rating and sentiment score.
-* Products [`data/out-products.csv`] - this is information about each of our products. Includes product_id, name, and unit price.
-* Keywords [`data/out-keywords.csv`] - this contains keywords generated from product reviews.
+* Reviews: `data/out-reviews.csv` will contain all of the reviews for each of the products. Includes rating and sentiment score.
+* Products: `data/out-products.csv` will contain information about each of our products. Includes product_id, name, and unit price.
+* Keywords: `data/out-keywords.csv` will contain keywords generated from product reviews.
 
 To run the script you will need to install [Node.js](https://nodejs.org/), an open-source JavaScript run-time environment for executing server-side JavaScript code.
 
